@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="public/style.css">
+		<meta charset='UTF-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv='Cache-control' content='no-store'>
+	</head>
+	<body>
+		<div class="sidenav">
+			<div id="puw_logo" class="">
+				<img class="hor_center" src="./public/logo/defaultlogo.png"/>
+				<div style="width:100%;" class="text_center">Portal Usług Wewnętrznych</div>
+			</div>
+			<br>
+			<div>
+				<table>
+					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'dashboard_tab')">
+							<th style="height:1.6vw;"><img class="" src="./public/icons/home.png"></th>
+							<th><span class="">Dashboard</span></th>
+					</tr>
+					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'apps_tab')">
+							<th style="height:1.6vw;"><img class="" src="./public/icons/add.png"></th>
+							<th><span class="">Aplikacje</span></th>
+					</tr>
+					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'calendar_tab1')">
+							<th style="height:1.6vw;"><img class="" src="./public/icons/calendar.png"></th>
+							<th><span class="">Kalendarz</span></th>
+					</tr>
+					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'login_tab')">
+							<th style="height:1.6vw;"><img class="" src="./public/icons/avatar.png"></th>
+							<th><span class="">Login</span></th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="main">
+			<div id="dashboard_tab" class="tabs" style="display:block">
+				dashboard
+			</div>
+			
+			<div id="apps_tab" class="tabs"> 
+				apps
+				<?php 
+					include("config.php");
+					$sql1 = "SELECT * FROM categories";
+					$result1 = mysqli_query($db,$sql1);
+					//$count = mysqli_num_rows($result1);
+					//echo $count;
+					if($result1->num_rows > 0) {
+						while($row1 = $result1->fetch_assoc()) {
+							$sql = "SELECT * FROM apps WHERE app_category_id=" . $row1["id"];
+							$result = mysqli_query($db,$sql);
+							if($result->num_rows > 0){
+								while($row = $result->fetch_assoc()){
+									echo "<div class='apptile col-14'>
+											<a target='_blank' href='" . $row["app_link"] . "'>
+												<div class='logo' style='background-image: url(public/logo" . $row["app_bg_link"] . ");background-color:#" . $row["app_bg_color"] . "'>
+													<img src='public/logo/" . $row["app_logo_link"] . "'>
+													<div class='tytul'><p>" . $row["app_name"] . "</p></div>
+												</div>
+											</a>
+										</div>";
+								}
+							}
+						}
+					}
+				?>
+			</div>
+			
+			<div id="calendar_tab1" class="tabs">
+				<div id="calendar_day" class="col-4"></div>
+				<div id="calendar" class="col-8">
+					<div id="calendar_tab" class="col-12 tab_content">
+						<div id="calendar_controls" class="col-12">
+							<div class="col-1 ver_center cursor_pointer" onClick="showMonth(-1)">&#10094;</div>
+							<div id="cal" class="col-10 ver_center"></div>
+							<div class="col-1 ver_center cursor_pointer" onClick="showMonth(1)">&#10095;</div>
+						</div>
+						<div id="calendar_month" class="col-12"></div>
+					</div>
+					<div id="event_details" class="tab_content col-12" style="display: none;"></div>
+				</div>
+			</div>
+			
+			<div id="login_tab" class="tabs">
+				login
+			</div>
+		</div>
+		<script src="public/script.js"></script>
+		<script src="public/jquery-3.6.3.min.js"></script>
+	 </body>
+ </html>
