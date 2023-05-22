@@ -49,7 +49,7 @@
 					if($result1->num_rows > 0) {
 						while($row1 = $result1->fetch_assoc()) {
 							$html_id = "" . $row1["id"] . $row1["name"] . "";
-							echo "<div class='col-12' onClick=\"collapse('$html_id', this);\">" . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12 padding_0' style='max-height:100%;'>";
+							echo "<div class='category_button col-12' onClick=\"collapse('$html_id', this);\">" . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12 padding_0' style='max-height:100%;'>";
 							
 							$sql = "SELECT * FROM apps WHERE app_category_id=" . $row1["id"];
 							$result = mysqli_query($db,$sql);

@@ -36,12 +36,6 @@ button{
 	height: auto;
 }
  
-.active {
-	background-color: #51269b;
-	color: white;
-	border-color: #51269b;
-}
- 
 .height100 {
 	 height: 100%;
 }
@@ -168,6 +162,28 @@ button{
 	transition: max-height 0.3s ease-in-out, padding 0.2s ease-in-out;
 }
 
+.category_button {
+	background-color: #6e79f3;
+	color: #f1f1f1;
+	font-size: 1.4vw;
+	transition: 0.3s;
+	cursor: pointer;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+	.category_button:hover {
+		background-color: #949fff;
+	}
+
+.active {
+	background-color: white;
+	color: black;
+}
+
+.active:hover {
+	background-color: lightgrey;
+}
+
 .logo {
 	border: 5px solid #ebebed;
 	background-position: center;
@@ -250,11 +266,15 @@ button{
 		border-spacing: 0;
 	}
 	
-	.sidenav tr:hover {
-		color: #f1f1f1;
-		background-color: #515aa1;
-		cursor: pointer
+	.sidenav tr {
+		transition: 0.3s;
 	}
+	
+		.sidenav tr:hover {
+			color: #f1f1f1;
+			background-color: #515aa1;
+			cursor: pointer;
+		}
 	
 	.sidenav th {
 		padding: 0.5vw;
