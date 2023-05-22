@@ -8,26 +8,27 @@
 	<body>
 		<div class="sidenav">
 			<div id="puw_logo" class="">
-				<img class="hor_center" src="./public/logo/defaultlogo.png"/>
+				<img class="hor_center" src="./public/icons/logo.png"/>
+				</br>
 				<div style="width:100%;" class="text_center">Portal Usług Wewnętrznych</div>
 			</div>
-			<br>
+			</br>
 			<div>
 				<table>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'dashboard_tab')">
-							<th style="height:1.6vw;"><img class="" src="./public/icons/home.png"></th>
+							<th><img class="" src="./public/icons/home.png"></th>
 							<th><span class="">Dashboard</span></th>
 					</tr>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'apps_tab')">
-							<th style="height:1.6vw;"><img class="" src="./public/icons/add.png"></th>
+							<th><img class="" src="./public/icons/add.png"></th>
 							<th><span class="">Aplikacje</span></th>
 					</tr>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'calendar_tab1')">
-							<th style="height:1.6vw;"><img class="" src="./public/icons/calendar.png"></th>
+							<th><img class="" src="./public/icons/calendar.png"></th>
 							<th><span class="">Kalendarz</span></th>
 					</tr>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'login_tab')">
-							<th style="height:1.6vw;"><img class="" src="./public/icons/avatar.png"></th>
+							<th><img class="" src="./public/icons/avatar.png"></th>
 							<th><span class="">Login</span></th>
 					</tr>
 				</table>
@@ -39,7 +40,6 @@
 			</div>
 			
 			<div id="apps_tab" class="tabs"> 
-				apps
 				<?php 
 					include("config.php");
 					$sql1 = "SELECT * FROM categories";
@@ -48,6 +48,9 @@
 					//echo $count;
 					if($result1->num_rows > 0) {
 						while($row1 = $result1->fetch_assoc()) {
+							$html_id = "" . $row1["id"] . $row1["name"] . "";
+							echo "<div class='col-12' onClick=\"collapse('$html_id', this);\">Kategoria: " . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12 padding_0' style='max-height:100%;'>";
+							
 							$sql = "SELECT * FROM apps WHERE app_category_id=" . $row1["id"];
 							$result = mysqli_query($db,$sql);
 							if($result->num_rows > 0){
@@ -62,6 +65,8 @@
 										</div>";
 								}
 							}
+							
+							echo "</div>";
 						}
 					}
 				?>
