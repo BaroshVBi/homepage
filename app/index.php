@@ -19,15 +19,15 @@
 							<th><img class="" src="./public/icons/home.png"></th>
 							<th><span class="">Dashboard</span></th>
 					</tr>
-					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'apps_tab')">
+					<tr class="tab_links " onClick="openTabs(this, 'apps_tab')">
 							<th><img class="" src="./public/icons/add.png"></th>
 							<th><span class="">Aplikacje</span></th>
 					</tr>
-					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'calendar_tab1')">
+					<tr class="tab_links " onClick="openTabs(this, 'calendar_tab1')">
 							<th><img class="" src="./public/icons/calendar.png"></th>
 							<th><span class="">Kalendarz</span></th>
 					</tr>
-					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'login_tab')">
+					<tr class="tab_links " onClick="openTabs(this, 'login_tab')">
 							<th><img class="" src="./public/icons/avatar.png"></th>
 							<th><span class="">Login</span></th>
 					</tr>
@@ -49,7 +49,7 @@
 					if($result1->num_rows > 0) {
 						while($row1 = $result1->fetch_assoc()) {
 							$html_id = "" . $row1["id"] . $row1["name"] . "";
-							echo "<div class='col-12' onClick=\"collapse('$html_id', this);\">Kategoria: " . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12 padding_0' style='max-height:100%;'>";
+							echo "<div class='col-12' onClick=\"collapse('$html_id', this);\">" . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12 padding_0' style='max-height:100%;'>";
 							
 							$sql = "SELECT * FROM apps WHERE app_category_id=" . $row1["id"];
 							$result = mysqli_query($db,$sql);

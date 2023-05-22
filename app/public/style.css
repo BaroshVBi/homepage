@@ -240,26 +240,37 @@ button{
 	}
 	
 	.sidenav span {
-		
+		color: #f1f1f1;
+		font-size: 1.2vw;
 	}
 	
 	.sidenav table {
-		width:100%;
+		width: 100%;
+		border: none;
+		border-spacing: 0;
+	}
+	
+	.sidenav tr:hover {
+		color: #f1f1f1;
+		background-color: #515aa1;
+		cursor: pointer
 	}
 	
 	.sidenav th {
 		padding: 0.5vw;
 	}
 	
+		.sidenav th:first-child {
+			text-align: right;
+		}
+		
+		.sidenav th:last-child {
+			text-align: left;
+		}
+	
 .main {
 	margin-left: 12vw; /* Same as the width of the sidebar */
 	padding: 0px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
 }
 
 .tabs {
