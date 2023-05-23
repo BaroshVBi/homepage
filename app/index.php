@@ -73,17 +73,26 @@
 			</div>
 			
 			<div id="calendar_tab1" class="tabs">
-				<div id="calendar_day" class="col-4"></div>
-				<div id="calendar" class="col-8">
-					<div id="calendar_tab" class="col-12 tab_content">
-						<div id="calendar_controls" class="col-12">
-							<div class="col-1 ver_center cursor_pointer" onClick="showMonth(-1)">&#10094;</div>
-							<div id="cal" class="col-10 ver_center"></div>
-							<div class="col-1 ver_center cursor_pointer" onClick="showMonth(1)">&#10095;</div>
-						</div>
-						<div id="calendar_month" class="col-12"></div>
+				<div class="col-12 padding_0">
+					<div id="calendar_controls" class="col-8">
+						<div class="col-1 ver_center cursor_pointer" onClick="showMonth(-1)">&#10094;</div>
+						<div id="cal" class="col-10 ver_center"></div>
+						<div class="col-1 ver_center cursor_pointer" onClick="showMonth(1)">&#10095;</div>
 					</div>
-					<div id="event_details" class="tab_content col-12" style="display: none;"></div>
+					
+				</div>
+				
+				<div id="calendar" class="col-8">
+					<div id="week_days_names" class="col-12 padding_0 text_center">
+						<div class="col-13">Poniedziałek</div>
+						<div class="col-13">Wtorek</div>
+						<div class="col-13">Środa</div>
+						<div class="col-13">Czwartek</div>
+						<div class="col-13">Piątek</div>
+						<div class="col-13">Sobota</div>
+						<div class="col-13">Niedziela</div>
+					</div>
+					<div id="calendar_month" class="col-12"></div>
 				</div>
 			</div>
 			
