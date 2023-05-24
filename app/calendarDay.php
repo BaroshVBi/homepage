@@ -5,7 +5,7 @@
 	
 	$id = $_REQUEST["id"];
 	$date = strtotime($id);
-	echo "<div id='calendar_week_day' class='col-12'>" . $tab_weekday[idate('w', $date)] . "</br>" . idate('d', $date) . "." . idate('m', $date) . "." . idate('Y', $date) . "</div>";
+	//echo "<div id='calendar_week_day' class='col-12'>" . $tab_weekday[idate('w', $date)] . "</br>" . idate('d', $date) . "." . idate('m', $date) . "." . idate('Y', $date) . "</div>";
 	$sql = "SELECT id, time, title FROM calendar WHERE (date = '" . $id . "') ORDER BY calendar.time ASC";		
 	$result = $db->query($sql);
 	$count = mysqli_num_rows($result);

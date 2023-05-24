@@ -20,7 +20,7 @@
 		$result = mysqli_query($db,$sql);
 		$count = mysqli_num_rows($result);
 		
-		echo "<div id=" . $fdate . " class='" . greyout($m) . " daytile col-13' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
+		echo "<div id=" . $fdate . " class='" . greyout($m) . " daytile col-13 border_right' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
 	}
 	
 	function greyout($m) {

@@ -115,11 +115,12 @@ button{
 	align-items: center;
 	text-align: center;
 	background-color: #ebebed;
-	border: solid 1px black;
+	transition: 0.3s;
 	position: relative;
 	aspect-ratio : 4 / 3;
 	margin: 0;
 	font-size: 1.3vw;
+	cursor: pointer;
 }
 
 	.daytile:hover{
@@ -130,35 +131,49 @@ button{
 		width: 100%;
 	}
 
-.greyout{
-	background-color: #b1b1b1;
+.greyout {
+	background-color: #e5e5e5;
+	color: #a3a2a2;
 }
 
-.focustile{
-	background-color: #51269b;
-    color: white;
+.focustile {
+	background-color: #6e79f3;
+    color: #ebebed;
 }
 
-.dot{
+.dot {
 	position: absolute;
 	font-weight: normal;
-	left: 0.3vw;
-	bottom: 0.1vw;
-	background-color: purple;
+	left: 0.2vw;
+	bottom: 0.2vw;
+	background-color: #6e79f3;
 	height: 1.5vw;
 	aspect-ratio: 1/1;
 	border-radius: 100%;
-	color: white;
+	color: #ebebed;
 }
 
-.tytul{
+	.focustile .dot {
+		color: #6e79f3;
+		background-color: #ebebed;
+	}
+
+.tytul {
 	position: absolute;
 	font-weight: normal;
 	left: 1.2vw;
 	bottom: 1vw;
 }
 
-.container{
+.border_right {
+	border-right: solid 1px black;
+}
+
+	.border_right:nth-child(7n) {
+		border: none;
+	}
+
+.container {
 	position: relative;
 	max-height: 0;
 	overflow: hidden;
@@ -299,7 +314,10 @@ button{
 }
 
 .tabs {
-	display:none;
+	padding: 1vw;
+	display: none;
+	height: 100%;
+	width: 100%;
 }
 
 .tab_link_active {
@@ -320,9 +338,8 @@ button{
 }
 
 #calendar {
-	aspect-ratio: 1/1;
-	background-color: #51269b;
 	padding: 0;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
 
 #calendar_tab {
@@ -330,12 +347,11 @@ button{
 }
 
 #calendar_month{
-	aspect-ratio: 7/6;
 	padding: 0;
 }
 
 #calendar_controls {
-	background-color: #5d33a6;
+	background-color: #6e79f3;
 	aspect-ratio: 18/1;
 	text-align: center;
 	color: white;
@@ -344,10 +360,10 @@ button{
 }
 
 #calendar_day {
-	aspect-ratio: 7/14;
+	/* aspect-ratio: 7/14; */
 	padding: 0;
-	background-color: #51269b;
 	color: white;
+	height: 100%;
 }
 
 #calendar_week_day {
@@ -358,15 +374,15 @@ button{
 }
 
 #calendar_events {
-	aspect-ratio: 7/12;
 }
 
 #week_days_names {
-	background-color: lightgrey;
+	font-size: 1vw;
+	background-color: #cdd0ff;
 }
 
 	#week_days_names div {
-		border: solid 1px black;
+		
 	}
 
 #event_details {
