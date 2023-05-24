@@ -32,7 +32,11 @@
 	
 	function dot($count) {
 		if($count > 0) {
-			return "<div class='dot'><p>&#10026;</p></div>";
+			if ($count > 9) {
+				return "<div class='dot text_center'><p class='ver_center' style='font-size:1vw;'>+9</p></div>";
+			} else {
+				return "<div class='dot'><p>" . $count . "</p></div>";
+			}
 		}
 	}
 ?>

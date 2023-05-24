@@ -16,20 +16,20 @@
 			<div>
 				<table>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'dashboard_tab')">
-							<th><img class="" src="./public/icons/home.png"></th>
-							<th><span class="">Dashboard</span></th>
+						<th><img class="" src="./public/icons/home.png"></th>
+						<th><span class="">Dashboard</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'apps_tab')">
-							<th><img class="" src="./public/icons/add.png"></th>
-							<th><span class="">Aplikacje</span></th>
+						<th><img class="" src="./public/icons/add.png"></th>
+						<th><span class="">Aplikacje</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'calendar_tab1')">
-							<th><img class="" src="./public/icons/calendar.png"></th>
-							<th><span class="">Kalendarz</span></th>
+						<th><img class="" src="./public/icons/calendar.png"></th>
+						<th><span class="">Kalendarz</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'login_tab')">
-							<th><img class="" src="./public/icons/avatar.png"></th>
-							<th><span class="">Login</span></th>
+						<th><img class="" src="./public/icons/avatar.png"></th>
+						<th><span class="">Login</span></th>
 					</tr>
 				</table>
 			</div>
@@ -76,7 +76,7 @@
 				<div class="col-12 padding_0">
 					<div id="calendar_controls" class="col-8">
 						<div class="col-1 ver_center cursor_pointer" onClick="showMonth(-1)">&#10094;</div>
-						<div id="cal" class="col-10 ver_center"></div>
+						<div id="cal" class="col-3 ver_center"></div>
 						<div class="col-1 ver_center cursor_pointer" onClick="showMonth(1)">&#10095;</div>
 					</div>
 					
@@ -102,5 +102,5 @@
 		</div>
 		<script src="public/script.js"></script>
 		<script src="public/jquery-3.6.3.min.js"></script>
-	 </body>
- </html>
+	</body>
+</html>

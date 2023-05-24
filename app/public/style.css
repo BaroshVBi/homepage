@@ -143,7 +143,12 @@ button{
 	position: absolute;
 	font-weight: normal;
 	left: 0.3vw;
-	bottom: 0.01vw;
+	bottom: 0.1vw;
+	background-color: purple;
+	height: 1.5vw;
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+	color: white;
 }
 
 .tytul{
@@ -331,7 +336,7 @@ button{
 
 #calendar_controls {
 	background-color: #5d33a6;
-	aspect-ratio: 12/1;
+	aspect-ratio: 18/1;
 	text-align: center;
 	color: white;
 	font-size: 1.0vw;
