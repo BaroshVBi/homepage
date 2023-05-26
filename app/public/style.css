@@ -228,15 +228,27 @@ button{
 .cblue2 {background-color: #2a7bc5;}
 
 .event_button {
-	background-color: #5d33a6;
-	border-left: 0.3vw solid white;
+	background-color: #6e79f3;
+	color: white;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 0.8vw;
 	cursor: pointer;
 	margin-bottom: 0.4vw;
+	transition: 0.35s;
 }
+
+	.event_button th {
+		padding: 1vw;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+		.event_button th:last-child {
+			text-align: left;
+		}
 
 	.event_button:hover {
 		filter: brightness(130%);
@@ -244,7 +256,7 @@ button{
 
 .event_active {
 	filter: brightness(140%);
- }
+}
 
 .sidenav {
 	height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -367,13 +379,16 @@ button{
 }
 
 #calendar_week_day {
-	background-color: #5d33a6;
-	aspect-ratio: 12/2;
+	background-color: #6e79f3;
+	aspect-ratio: 18/2;
 	text-align: center;
-	font-size: 1.0vw;
+	font-size: 0.9vw;
 }
 
 #calendar_events {
+	table-layout: fixed;
+	border-spacing: 2px 0.5vw;
+	
 }
 
 #week_days_names {
