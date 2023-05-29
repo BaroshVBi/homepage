@@ -31,6 +31,10 @@ function showDay(id) {
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("calendar_day").innerHTML = this.responseText;
+			$("#calendar_events tr").hide();
+			$("#calendar_events tr").each(function(index) {
+				$(this).delay(index*200).show(500);
+			});
 		}
 	}
 	xhttp.open("GET", "calendarDay.php?id=" + id, true);
@@ -42,7 +46,8 @@ function eventDetails(id, el) {
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("event_details").innerHTML = this.responseText;
-			$("#event_details").css({"display":"block"});
+			//$("#event_details").css({"display":"block"});
+			$("#event_details").animate({"right": "0"});
 		}
 	}
 	xhttp.open("GET", "eventDetails.php?id=" + id, true);
@@ -60,7 +65,9 @@ function focusTile(id) {
 		tile.classList.add('focustile');
 		showDay(id);
 		currentday = id;
-		closeSlideIn();
+		if($("#event_details").css("right") == '0px'){
+			closeSlideIn();
+		}
 	}
 }
 
@@ -80,7 +87,8 @@ function collapse(el, elb) {
 }
 
 function closeSlideIn() {
-    $("#event_details").css({"display":"none"});
+	$("#event_details").animate({"right": "-35%"});
+    //$("#event_details").css({"display":"none"});
 }
 
 function openTabs(evt, tab) {

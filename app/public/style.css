@@ -259,16 +259,16 @@ button{
 		}
 
 .slide_in {
-	display: none;
+	padding: 0;
+	display: block;
 	height: 100%;
     width: 32vw;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0;
+    right: -35%;
     background-color: #171f59;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 
 #calendar {
@@ -305,11 +305,6 @@ button{
 #week_days_names {
 	font-size: 1vw;
 	background-color: #cdd0ff;
-}
-
-#event_details {
-	aspect-ratio: 1/1;
-	padding: 0;
 }
 
 #event_details_title {
