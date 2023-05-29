@@ -63,6 +63,7 @@ button{
 	padding: 0 !important;
 }
  
+ /*1-12 podział ekranu na 12 kolumn */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -76,8 +77,8 @@ button{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.col-13 {width: 14.28%;}
-.col-14 {width: 12.5%;}
+.col-13 {width: 14.28%;} /* 7 kolumn - kalendarz */
+.col-14 {width: 12.5%;} /* 8 kolumn - apki */
  
 [class*="col-"] {
 	float: left;
@@ -94,19 +95,6 @@ button{
 .cgranat {background-color: #2a406d;}
 .cblue {background-color: #4395d1;}
 .cblue2 {background-color: #2a7bc5;}
-
-#puw_logo {
-	items-align: center;
-}
-#puw_logo img{
-	height: 10vw;
-}
-
-#puw_logo div{
-	text-decoration: none;
-	font-size: 25px;
-	color: #f1f1f1;
-}
 
 /* apps =======================================================================*/
 
@@ -325,18 +313,37 @@ button{
 }
 
 #event_details_title {
-	background-color: #5d33a6;
-	font-size: 1.0vw;
+	font-size: 1.8vw;
 	aspect-ratio: 7/1;
 	padding: 0;
 	color: white;
+	border-bottom: white 0.2vw solid;
 }
 
 #event_details_content {
-	background-color: #ebebed;
-	aspect-ratio: 7/6;
-	color: black;
+	
 }
+
+	#event_details_content table {
+		width: 100%;
+		color: white;
+		border-spacing: 0;
+	}
+	
+	#event_details_content th {
+		padding: 1.0vw;
+		border-bottom: black solid 1px;
+	}
+		
+		#event_details_content th:first-child {
+			padding-right: 0;
+			text-align: right;
+			width:10%;
+		}
+		
+		#event_details_content th:last-child {
+			text-align: left;
+		}
 
 #form_calendar {
 	margin: 1vw;
@@ -425,6 +432,20 @@ button{
 	color: #f1f1f1;
 	background-color: #434c8d;
 }
+
+#puw_logo {
+	items-align: center;
+}
+
+	#puw_logo img{
+		height: 10vw;
+	}
+
+	#puw_logo div{
+		text-decoration: none;
+		font-size: 1.5vw;
+		color: #f1f1f1;
+	}
 
 /* login ======================================================================*/
 
