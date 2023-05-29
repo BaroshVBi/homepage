@@ -38,18 +38,11 @@ function showDay(id) {
 }
 
 function eventDetails(id, el) {
-	var tabcontent = document.getElementsByClassName('event_active');
-	for (var i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("event_active");
-    }
-	el.classList.add("event_active");
-	
-	
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("event_details").innerHTML = this.responseText;
-			tabs("event_details");
+			$("#event_details").css({"display":"block"});
 		}
 	}
 	xhttp.open("GET", "eventDetails.php?id=" + id, true);
@@ -67,6 +60,7 @@ function focusTile(id) {
 		tile.classList.add('focustile');
 		showDay(id);
 		currentday = id;
+		closeSlideIn();
 	}
 }
 
@@ -85,19 +79,8 @@ function collapse(el, elb) {
 	} 
 }
 
-function tabs(tab) {
-    var tabcontent = document.getElementsByClassName('tab_content');
-    for (var i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = 'none';
-    }
-    document.getElementById(tab).style.display = 'block';
-	
-	if (tab == 'calendar_tab') {
-		var tabcontent = document.getElementsByClassName('event_active');
-		for (var i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].classList.remove('event_active');
-		}
-	}
+function closeSlideIn() {
+    $("#event_details").css({"display":"none"});
 }
 
 function openTabs(evt, tab) {

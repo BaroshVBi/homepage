@@ -65,7 +65,6 @@
 										</div>";
 								}
 							}
-							
 							echo "</div>";
 						}
 					}
@@ -88,16 +87,19 @@
 						<div class="col-13 border_right">Sobota</div>
 						<div class="col-13 border_right">Niedziela</div>
 					</div>
-					<div id="calendar_month" class="col-12"></div>
+					<div id="calendar_month" class="col-12 padding_0"></div>
 				</div>
-				<div class="col-4 padding_0">
-					<div id="calendar_day" class=""></div>
+				<div id="calendar_day" class="col-4 padding_0">
 				</div>
 			</div>
 			
 			<div id="login_tab" class="tabs">
 				login
 			</div>
+		</div>
+		
+		<div id="event_details" class="slide_in">
+			
 		</div>
 		<script src="public/script.js"></script>
 		<script src="public/jquery-3.6.3.min.js"></script>

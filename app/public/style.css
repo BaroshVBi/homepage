@@ -24,18 +24,6 @@ button{
 		filter:brightness(130%);
 	}
  
-.apptile a { 
-	text-decoration: none; 
-	background-color: grey;
-	color: white;
-}  
- 
-.apptile img{
-	max-width: 40%;
-	margin: 30%;
-	height: auto;
-}
- 
 .height100 {
 	 height: 100%;
 }
@@ -96,19 +84,103 @@ button{
 	padding: 0.5vw;
 }
 
+.cred{ background-color: #d80000;}
+.cdarkred{ background-color: #783c3c;}
+.cgreen {background-color: #539f42;}
+.cgreen2 {background-color: #6ba900;}
+.cgreen3 {background-color: #50c900;}
+.cgreen4 {background-color: #b4c43f;}
+.cdarkgreen {background-color: #17490f;}
+.cgranat {background-color: #2a406d;}
+.cblue {background-color: #4395d1;}
+.cblue2 {background-color: #2a7bc5;}
+
+#puw_logo {
+	items-align: center;
+}
+#puw_logo img{
+	height: 10vw;
+}
+
+#puw_logo div{
+	text-decoration: none;
+	font-size: 25px;
+	color: #f1f1f1;
+}
+
+/* apps =======================================================================*/
+
 .apptile {
 	position: relative;
 	max-width: 100%;
 	height: auto;
-	margin:0;
-	font-size:1.0vw;
+	margin: 0;
+	font-size: 1.0vw;
 }
 
-@media screen and (max-width: 600px) {
-	.apptile{
-		font-size: 1vw;
+	.apptile a { 
+		text-decoration: none; 
+		background-color: grey;
+		color: white;
+	}  
+	 
+	.apptile img {
+		max-width: 40%;
+		margin: 30%;
+		height: auto;
 	}
+
+.tytul {
+	position: absolute;
+	font-weight: normal;
+	left: 1.2vw;
+	bottom: 1vw;
 }
+
+.container {
+	position: relative;
+	max-height: 0;
+	overflow: hidden;
+	background-color: #ebebed;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+	transition: max-height 0.3s ease-in-out, padding 0.2s ease-in-out;
+}
+
+.category_button {
+	background-color: #6e79f3;
+	color: #f1f1f1;
+	font-size: 1.4vw;
+	transition: 0.3s;
+	cursor: pointer;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+	.category_button:hover {
+		background-color: #949fff;
+	}
+
+.active {
+	background-color: white;
+	color: black;
+}
+
+	.active:hover {
+		background-color: lightgrey;
+	}
+
+.logo {
+	border: 5px solid #ebebed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	.logo:hover {
+		border: 5px solid #a7aaaf;
+		transition: 0.2s;
+	}
+
+/* calendar ===================================================================*/
 
 .daytile {
 	display: flex;
@@ -123,7 +195,7 @@ button{
 	cursor: pointer;
 }
 
-	.daytile:hover{
+	.daytile:hover {
 		filter: brightness(130%);
 	}
 		
@@ -158,13 +230,6 @@ button{
 		background-color: #ebebed;
 	}
 
-.tytul {
-	position: absolute;
-	font-weight: normal;
-	left: 1.2vw;
-	bottom: 1vw;
-}
-
 .border_right {
 	border-right: solid 1px black;
 }
@@ -172,60 +237,6 @@ button{
 	.border_right:nth-child(7n) {
 		border: none;
 	}
-
-.container {
-	position: relative;
-	max-height: 0;
-	overflow: hidden;
-	background-color: #ebebed;
-	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-	transition: max-height 0.3s ease-in-out, padding 0.2s ease-in-out;
-}
-
-.category_button {
-	background-color: #6e79f3;
-	color: #f1f1f1;
-	font-size: 1.4vw;
-	transition: 0.3s;
-	cursor: pointer;
-	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-}
-
-	.category_button:hover {
-		background-color: #949fff;
-	}
-
-.active {
-	background-color: white;
-	color: black;
-}
-
-.active:hover {
-	background-color: lightgrey;
-}
-
-.logo {
-	border: 5px solid #ebebed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-	.logo:hover{
-		border: 5px solid #a7aaaf;
-		transition: 0.2s;
-	}
-
-.cred{ background-color: #d80000;}
-.cdarkred{ background-color: #783c3c;}
-.cgreen {background-color: #539f42;}
-.cgreen2 {background-color: #6ba900;}
-.cgreen3 {background-color: #50c900;}
-.cgreen4 {background-color: #b4c43f;}
-.cdarkgreen {background-color: #17490f;}
-.cgranat {background-color: #2a406d;}
-.cblue {background-color: #4395d1;}
-.cblue2 {background-color: #2a7bc5;}
 
 .event_button {
 	background-color: #6e79f3;
@@ -239,6 +250,10 @@ button{
 	transition: 0.35s;
 }
 
+	.event_button:hover {
+		filter: brightness(130%);
+	}
+
 	.event_button th {
 		padding: 1vw;
 		white-space: nowrap;
@@ -246,17 +261,104 @@ button{
 		text-overflow: ellipsis;
 	}
 	
+		.event_button th:first-child {
+			border-radius: 10px 0px 0px 10px;
+		}
+	
 		.event_button th:last-child {
 			text-align: left;
+			border-radius: 0 10px 10px 0;
 		}
 
-	.event_button:hover {
-		filter: brightness(130%);
+.slide_in {
+	display: none;
+	height: 100%;
+    width: 32vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #171f59;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#calendar {
+	padding: 0;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+#calendar_controls {
+	background-color: #6e79f3;
+	aspect-ratio: 18/1;
+	text-align: center;
+	color: white;
+	font-size: 1.0vw;
+	padding: 0;
+}
+
+#calendar_day {
+	color: white;
+	height: 100%;
+}
+
+#calendar_week_day {
+	background-color: #6e79f3;
+	aspect-ratio: 18/2;
+	text-align: center;
+	font-size: 0.9vw;
+}
+
+#calendar_events {
+	table-layout: fixed;
+	border-spacing: 2px 0.5vw;
+}
+
+#week_days_names {
+	font-size: 1vw;
+	background-color: #cdd0ff;
+}
+
+#event_details {
+	aspect-ratio: 1/1;
+	padding: 0;
+}
+
+#event_details_title {
+	background-color: #5d33a6;
+	font-size: 1.0vw;
+	aspect-ratio: 7/1;
+	padding: 0;
+	color: white;
+}
+
+#event_details_content {
+	background-color: #ebebed;
+	aspect-ratio: 7/6;
+	color: black;
+}
+
+#form_calendar {
+	margin: 1vw;
+	background-color: white;
+	border-collapse: collapse;
+	table-layout: auto;
+}
+
+	#form_calendar tr {
+		padding: 0;
 	}
 
-.event_active {
-	filter: brightness(140%);
-}
+	#form_calendar th {
+		border: 1px solid black;
+	}
+	
+	#form_calendar textarea {
+		height: 10vw;
+		resize: none;
+	}
+
+/* side menu and main =========================================================*/
 
 .sidenav {
 	height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -269,19 +371,6 @@ button{
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 20px;
 }
-
-	.sidenav a {
-		padding: 6px 8px 6px 16px;
-		text-decoration: none;
-		font-size: 1.6vw;
-		color: #818181;
-		display: block;
-	}
-	
-	.sidenav a:hover {
-		color: #f1f1f1;
-		background-color: #434c8d;
-	}
 	
 	.sidenav img {
 		height:1.6vw;
@@ -322,7 +411,7 @@ button{
 	
 .main {
 	margin-left: 12vw; /* Same as the width of the sidebar */
-	padding: 0px;
+	padding: 0;
 }
 
 .tabs {
@@ -337,87 +426,7 @@ button{
 	background-color: #434c8d;
 }
 
-#left{
-	float: left;
-	padding: 0px;
-	height: 100%;
-}
-
-#right{
-	float: left;
-	padding: 0px;
-	height: 100%;
-}
-
-#calendar {
-	padding: 0;
-	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-}
-
-#calendar_tab {
-	padding: 0;
-}
-
-#calendar_month{
-	padding: 0;
-}
-
-#calendar_controls {
-	background-color: #6e79f3;
-	aspect-ratio: 18/1;
-	text-align: center;
-	color: white;
-	font-size: 1.0vw;
-	padding: 0;
-}
-
-#calendar_day {
-	/* aspect-ratio: 7/14; */
-	padding: 0;
-	color: white;
-	height: 100%;
-}
-
-#calendar_week_day {
-	background-color: #6e79f3;
-	aspect-ratio: 18/2;
-	text-align: center;
-	font-size: 0.9vw;
-}
-
-#calendar_events {
-	table-layout: fixed;
-	border-spacing: 2px 0.5vw;
-	
-}
-
-#week_days_names {
-	font-size: 1vw;
-	background-color: #cdd0ff;
-}
-
-	#week_days_names div {
-		
-	}
-
-#event_details {
-	aspect-ratio: 1/1;
-	padding: 0;
-}
-
-#event_details_title {
-	background-color: #5d33a6;
-	font-size: 1.0vw;
-	aspect-ratio: 7/1;
-	padding: 0;
-	color: white;
-}
-
-#event_details_content {
-	background-color: #ebebed;
-	aspect-ratio: 7/6;
-	color: black;
-}
+/* login ======================================================================*/
 
 #login_form {
 	background-color: #ebebed;
@@ -442,36 +451,3 @@ button{
 		background-color: #51269b;
 		color: #ebebed;
 	}
-	
-#form_calendar {
-	margin: 1vw;
-	background-color: white;
-	border-collapse: collapse;
-	table-layout: auto;
-}
-
-	#form_calendar tr {
-		padding: 0;
-	}
-
-	#form_calendar th {
-		border: 1px solid black;
-	}
-	
-	#form_calendar textarea {
-		height: 10vw;
-		resize: none;
-	}
-	
-#puw_logo {
-	items-align:center;
-}
-#puw_logo img{
-	height:10vw;
-}
-
-#puw_logo div{
-	text-decoration: none;
-	font-size: 25px;
-	color: #f1f1f1;
-}
