@@ -36,7 +36,28 @@
 		</div>
 		<div class="main">
 			<div id="dashboard_tab" class="tabs" style="display:block">
-				dashboard
+				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+					Powiadomienia - dodawane przez zalogowanych uzytkownikow
+				</div>
+				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+					<div class="col-12" style="aspect-ratio:12/1;">Nadchodzące wydarzenia - z kalendarza</div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+				</div>
+				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+					Ostatnio Używane Aplikacje - Oparte o sesje
+				</div>
+				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+					Ulubione - zalogowany uzytkownik
+				</div>
+				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+					Często Używane - statystyka z bazy danych
+				</div>
 			</div>
 			
 			<div id="apps_tab" class="tabs"> 
