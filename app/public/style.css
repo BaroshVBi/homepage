@@ -247,6 +247,7 @@ button{
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 	}
 	
 		.event_button th:first-child {
@@ -328,6 +329,7 @@ button{
 	#event_details_content th {
 		padding: 1.0vw;
 		border-bottom: black solid 1px;
+		background-color: #29316b;
 	}
 		
 		#event_details_content th:first-child {
@@ -338,6 +340,10 @@ button{
 		
 		#event_details_content th:last-child {
 			text-align: left;
+		}
+		
+		#event_details_content tr:nth-child(2n) th {
+			background-color: #1e244e;
 		}
 
 #form_calendar {

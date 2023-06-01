@@ -28,6 +28,7 @@ function showMonth(k) {
 
 function showDay(id) {
 	var xhttp = new XMLHttpRequest();
+	$("#calendar_events tr").hide(500);
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("calendar_day").innerHTML = this.responseText;

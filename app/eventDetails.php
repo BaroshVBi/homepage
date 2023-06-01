@@ -16,7 +16,7 @@
 						<div class='col-1 cursor_pointer' onClick=closeSlideIn();>✖</div>
 					</div>";
 					
-			echo "	<div id='event_details_content' class='col-12 padding_0'>
+			echo "	<div id='event_details_content' class='col-12'>
 						<table>
 							<tr>
 								<th>Tytuł:</th>
