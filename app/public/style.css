@@ -100,6 +100,11 @@ button{
 .cblue {background-color: #4395d1;}
 .cblue2 {background-color: #2a7bc5;}
 
+.dmenu{
+	margin: 0vw;
+	aspect-ratio: 12/4;
+}
+
 /* apps =======================================================================*/
 
 .apptile {

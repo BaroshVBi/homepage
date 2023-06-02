@@ -4,6 +4,7 @@ var c = new Date();
 var currentday = "" + c.getFullYear() + "-" + (c.getMonth() + 1) + "-" + c.getDate() + "";
 
 showMonth(0);
+showWeek();
 
 //window.addEventListener('load', function () {
 //  alert("It's loaded!")
@@ -53,6 +54,16 @@ function eventDetails(id, el) {
 	}
 	xhttp.open("GET", "eventDetails.php?id=" + id, true);
 	xhttp.send();
+}
+
+function showWeek(){
+	$.ajax({
+		type: "POST",
+		url:  "week.php",
+		success: function(data){
+		   $("#week").html(data);
+		}
+    });
 }
 
 function focusTile(id) {

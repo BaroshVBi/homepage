@@ -36,26 +36,29 @@
 		</div>
 		<div class="main">
 			<div id="dashboard_tab" class="tabs" style="display:block">
-				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+				<div class="dmenu col-6 box_shadow">
 					Powiadomienia - dodawane przez zalogowanych uzytkownikow
 				</div>
-				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+				<div class="dmenu col-6 box_shadow">
 					<div class="col-12" style="aspect-ratio:12/1;">Nadchodzące wydarzenia - z kalendarza</div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
-					<div class="col-13 box_shadow" style="aspect-ratio:1/1;"></div>
+					<div id="week_days_names" class="col-12 padding_0 text_center">
+						<div class="col-13 border_right">Poniedziałek</div>
+						<div class="col-13 border_right">Wtorek</div>
+						<div class="col-13 border_right">Środa</div>
+						<div class="col-13 border_right">Czwartek</div>
+						<div class="col-13 border_right">Piątek</div>
+						<div class="col-13 border_right">Sobota</div>
+						<div class="col-13 border_right">Niedziela</div>
+					</div>
+					<div id="week" class="col-12 padding_0"></div>
 				</div>
-				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+				<div class="dmenu col-6 box_shadow">
 					Ostatnio Używane Aplikacje - Oparte o sesje
 				</div>
-				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+				<div class="dmenu col-6 box_shadow">
 					Ulubione - zalogowany uzytkownik
 				</div>
-				<div class="col-6 box_shadow" style="aspect-ratio:12/4;">
+				<div class="dmenu col-6 box_shadow">
 					Często Używane - statystyka z bazy danych
 				</div>
 			</div>
@@ -122,7 +125,7 @@
 		<div id="event_details" class="slide_in">
 			
 		</div>
-		<script src="public/script.js"></script>
 		<script src="public/jquery-3.6.3.min.js"></script>
+		<script src="public/script.js"></script>
 	</body>
 </html>
