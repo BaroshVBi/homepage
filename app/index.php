@@ -38,7 +38,7 @@
 			<div id="dashboard_tab" class="tabs" style="display:block">
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
-						Powiadomienia - dodawane przez zalogowanych uzytkownikow
+						<?php include("displayNotifications.php"); ?>
 					</div>
 				</div>
 				<div class="col-6">

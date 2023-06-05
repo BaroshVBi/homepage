@@ -106,6 +106,21 @@ button{
 	padding: 0;
 }
 
+/* dashboard ==================================================================*/
+
+.notify_tab {
+	height: 80%;
+}
+
+.notify_tab_dot {
+	
+}
+
+#notify_tab_controls {
+	height: 20%;
+	text-align: center;
+}
+
 /* apps =======================================================================*/
 
 .apptile {
