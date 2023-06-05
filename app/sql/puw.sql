@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 19 Maj 2023, 13:15
+-- Czas generowania: 05 Cze 2023, 16:37
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -37,13 +37,6 @@ CREATE TABLE `apps` (
   `app_bg_color` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Zrzut danych tabeli `apps`
---
-
-INSERT INTO `apps` (`id`, `app_name`, `app_category_id`, `app_link`, `app_logo_link`, `app_bg_link`, `app_bg_color`) VALUES
-(1, 'Youtube', 1, 'https://www.youtube.com/', 'defaultlogo.png', '', 'f44336');
-
 -- --------------------------------------------------------
 
 --
@@ -60,20 +53,6 @@ CREATE TABLE `calendar` (
   `descr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Zrzut danych tabeli `calendar`
---
-
-INSERT INTO `calendar` (`id`, `date`, `time`, `user_login`, `user_dn`, `title`, `descr`) VALUES
-(1, '2023-04-12', '12:49:08', '1', '', 'Test', 'Nowe ogłoszenie'),
-(2, '2023-04-04', '11:33:13', '3', '', 'title', 'testowe ogloszenie'),
-(3, '2023-04-12', '11:52:09', '2', '', 'tesdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddst2', 'test'),
-(4, '2023-04-12', '12:11:02', '6', '', 'tytul', 'halo\r\n\r\nhalo\r\n\r\nhads\r\na\r\nsd\r\n\r\n\r\nsdfsd'),
-(5, '2023-05-02', '27:22:29', 'guzb', 'Bartosz Guz', 'testwo', ' no nie wiem'),
-(6, '2023-05-11', '14:57:00', 'guzb', 'Bartosz Guz', 'e', 'test'),
-(7, '0000-00-00', '00:00:00', 'guzb', 'Bartosz Guz', '', ''),
-(8, '0000-00-00', '00:00:00', 'guzb', 'Bartosz Guz', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -85,14 +64,6 @@ CREATE TABLE `categories` (
   `name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Zrzut danych tabeli `categories`
---
-
-INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Ogólne'),
-(2, 'Kadry');
-
 -- --------------------------------------------------------
 
 --
@@ -101,11 +72,11 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 
 CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `title` text NOT NULL,
   `descr` text NOT NULL,
   `date` date NOT NULL,
-  `time` time NOT NULL,
-  `user_id` int(11) NOT NULL
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -165,19 +136,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `apps`
 --
 ALTER TABLE `apps`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `calendar`
 --
 ALTER TABLE `calendar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `notifications`
