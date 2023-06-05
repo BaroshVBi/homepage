@@ -48,7 +48,6 @@ function eventDetails(id, el) {
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("event_details").innerHTML = this.responseText;
-			//$("#event_details").css({"display":"block"});
 			$("#event_details").animate({"right": "0"});
 		}
 	}
@@ -100,7 +99,6 @@ function collapse(el, elb) {
 
 function closeSlideIn() {
 	$("#event_details").animate({"right": "-35%"});
-    //$("#event_details").css({"display":"none"});
 }
 
 function openTabs(evt, tab) {

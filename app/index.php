@@ -16,50 +16,55 @@
 			<div>
 				<table>
 					<tr class="tab_links tab_link_active" onClick="openTabs(this, 'dashboard_tab')">
-						<th><img class="" src="./public/icons/home.png"></th>
-						<th><span class="">Dashboard</span></th>
+						<th><img src="./public/icons/home.png"></th>
+						<th><span>Dashboard</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'apps_tab')">
-						<th><img class="" src="./public/icons/add.png"></th>
-						<th><span class="">Aplikacje</span></th>
+						<th><img src="./public/icons/add.png"></th>
+						<th><span>Aplikacje</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'calendar_tab1')">
-						<th><img class="" src="./public/icons/calendar.png"></th>
-						<th><span class="">Kalendarz</span></th>
+						<th><img src="./public/icons/calendar.png"></th>
+						<th><span>Kalendarz</span></th>
 					</tr>
 					<tr class="tab_links " onClick="openTabs(this, 'login_tab')">
-						<th><img class="" src="./public/icons/avatar.png"></th>
-						<th><span class="">Login</span></th>
+						<th><img src="./public/icons/avatar.png"></th>
+						<th><span>Login</span></th>
 					</tr>
 				</table>
 			</div>
 		</div>
 		<div class="main">
 			<div id="dashboard_tab" class="tabs" style="display:block">
-				<div class="dmenu col-6 box_shadow">
-					Powiadomienia - dodawane przez zalogowanych uzytkownikow
-				</div>
-				<div class="dmenu col-6 box_shadow">
-					<div class="col-12" style="aspect-ratio:12/1;">Nadchodzące wydarzenia - z kalendarza</div>
-					<div id="week_days_names" class="col-12 padding_0 text_center">
-						<div class="col-13 border_right">Poniedziałek</div>
-						<div class="col-13 border_right">Wtorek</div>
-						<div class="col-13 border_right">Środa</div>
-						<div class="col-13 border_right">Czwartek</div>
-						<div class="col-13 border_right">Piątek</div>
-						<div class="col-13 border_right">Sobota</div>
-						<div class="col-13 border_right">Niedziela</div>
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						Powiadomienia - dodawane przez zalogowanych uzytkownikow
 					</div>
-					<div id="week" class="col-12 padding_0"></div>
 				</div>
-				<div class="dmenu col-6 box_shadow">
-					Ostatnio Używane Aplikacje - Oparte o sesje
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						<div id="week" class="col-12 padding_0"></div>
+					</div>
 				</div>
-				<div class="dmenu col-6 box_shadow">
-					Ulubione - zalogowany uzytkownik
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						Ostatnio Używane Aplikacje - Oparte o sesje
+					</div>
 				</div>
-				<div class="dmenu col-6 box_shadow">
-					Często Używane - statystyka z bazy danych
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						Ulubione - zalogowany uzytkownik
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						Często Używane - statystyka z bazy danych
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="dmenu col-12 box_shadow">
+						
+					</div>
 				</div>
 			</div>
 			
@@ -102,7 +107,7 @@
 						<div id="cal" class="col-3 ver_center"></div>
 						<div class="col-1 ver_center cursor_pointer" onClick="showMonth(1)">&#10095;</div>
 					</div>
-					<div id="week_days_names" class="col-12 padding_0 text_center">
+					<div class="week_days_names col-12 padding_0 text_center">
 						<div class="col-13 border_right">Poniedziałek</div>
 						<div class="col-13 border_right">Wtorek</div>
 						<div class="col-13 border_right">Środa</div>
