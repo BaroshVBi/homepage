@@ -109,11 +109,29 @@ button{
 /* dashboard ==================================================================*/
 
 .notify_tab {
-	height: 80%;
+	display: table-cell;
+	height: 100%;
+	position: relative;
+	padding: 0.5vw;
 }
 
 .notify_tab_dot {
 	
+}
+
+#notify_tab_area {
+	height: 80%;
+	padding: 0;
+	overflow: hidden;
+}
+
+#notify_tab_table {
+	height: 100%;
+	position: relative;
+    left: 0;
+    display: table;
+    table-layout: fixed;
+    transition: 1s;
 }
 
 #notify_tab_controls {

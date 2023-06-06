@@ -43,7 +43,7 @@
 				</div>
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
-						<div id="week" class="col-12 padding_0"></div>
+						<div id="week" class="col-12 padding_0"><?php include("week.php"); ?></div>
 					</div>
 				</div>
 				<div class="col-6">

@@ -4,7 +4,7 @@ var c = new Date();
 var currentday = "" + c.getFullYear() + "-" + (c.getMonth() + 1) + "-" + c.getDate() + "";
 
 showMonth(0);
-showWeek();
+//showWeek();
 
 //window.addEventListener('load', function () {
 //  alert("It's loaded!")
@@ -112,4 +112,9 @@ function openTabs(evt, tab) {
 	}
 	document.getElementById(tab).style.display = "block";
 	evt.className += " tab_link_active";
+}
+
+function notifyTab(el) {
+	//alert($(el).index());
+	$("#notify_tab_table").css({"left": "-" + (($(el).index() - 1) * 100) + "%"});
 }
