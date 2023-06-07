@@ -115,6 +115,5 @@ function openTabs(evt, tab) {
 }
 
 function notifyTab(el) {
-	//alert($(el).index());
-	$("#notify_tab_table").css({"left": "-" + (($(el).index() - 1) * 100) + "%"});
+	$("#notify_tab_table").css({"left": "-" + ($(el).index() * 100) + "%"});
 }

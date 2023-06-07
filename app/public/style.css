@@ -120,9 +120,18 @@ button{
 	font-size: 2vw;
 }
 
-	.notify_title div {
+	.notify_title div:first-child {
+		float:left;
+		width: 90%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.notify_title div:last-child {
 		float: right;
-		font-size: 1vw;
+		width: 10%;
+		font-size: 40%;
 		position: relative;
 		top: 0;
 		right: 0;
@@ -130,8 +139,20 @@ button{
 	}
 
 .notify_descr {
+	width:100%;
 	height: 75%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+	border: none;
+	background-color: transparent;
+	resize: none;
+	font-size: 1vw;
 }
+
+	.notify_descr:focus {
+		 outline: none !important;
+	}
 
 .notify_tab_dot {
 	
