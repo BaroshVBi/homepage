@@ -164,8 +164,22 @@ button{
 	}
 
 .notify_tab_dot {
-	
+	float: left;
+	width: 10%;
+	padding: 0;
 }
+
+	.notify_tab_dot div {
+		background-color: grey;
+		aspect-ratio: 1/1;
+		height: 100%;
+		border-radius: 50%;
+		transition: 0.3s;
+	}
+	
+		.notify_tab_dot div:hover {
+			filter:brightness(130%);
+		}
 
 #notify_tab_area {
 	height: 80%;

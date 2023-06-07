@@ -16,7 +16,7 @@
 		}
 		echo "</div></div><div id='notify_tab_controls' class='col-12'>";
 		for($i = 1; $i <= $count; $i++ ){
-			echo "<div class='col-1 cursor_pointer notify_tab_dot' onClick='notifyTab(this);'>O</div>";
+			echo "<div class='cursor_pointer notify_tab_dot' onClick='notifyTab(this);'><div class='hor_center' " . (($i == 1) ? "style='background-color: #6e79f3'" : "") . "></div></div>";
 		}
 		echo "</div>";
 	} 

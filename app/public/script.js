@@ -117,5 +117,7 @@ function openTabs(evt, tab) {
 }
 
 function notifyTab(el) {
+	$(".notify_tab_dot").children().css({"background-color": "grey"});
+	$(el).children().css({"background-color": "#6e79f3"});
 	$("#notify_tab_table").css({"left": "-" + ($(el).index() * 100) + "%"});
 }
