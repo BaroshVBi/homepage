@@ -6,6 +6,7 @@
 		<meta http-equiv='Cache-control' content='no-store'>
 	</head>
 	<body>
+		<!--<div id='loading'></div>-->
 		<div class="sidenav">
 			<div id="puw_logo" class="">
 				<img class="hor_center" src="./public/icons/logo.png"/>

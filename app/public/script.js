@@ -7,7 +7,9 @@ showMonth(0);
 //showWeek();
 
 //window.addEventListener('load', function () {
-//  alert("It's loaded!")
+  //alert("It's loaded!")
+  //$("#loading").css({"background-color": "transparent"});
+  //$("#loading").css({"width": "0"});
 //})
 
 function showMonth(k) {
