@@ -1,6 +1,7 @@
 <?php
 	include("config.php");
-
+	require_once("functions.php");
+	
 	$m = $_REQUEST["m"];
 	$firstday = mktime(0, 0, 0, idate('m') + $m, 1, idate('Y'));
 	$currentmonth = idate('m', $firstday);
@@ -20,23 +21,6 @@
 		$result = mysqli_query($db,$sql);
 		$count = mysqli_num_rows($result);
 		
-		echo "<div id=" . $fdate . " class='" . greyout($m) . " daytile col-13 border_right' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
-	}
-	
-	function greyout($m) {
-		global $currentmonth;
-		if($m != $currentmonth){
-			return "greyout";
-		}
-	}
-	
-	function dot($count) {
-		if($count > 0) {
-			if ($count > 9) {
-				return "<div class='dot text_center'><p class='ver_center' style='font-size:1vw;'>+9</p></div>";
-			} else {
-				return "<div class='dot'><p>" . $count . "</p></div>";
-			}
-		}
+		echo "<div id=" . $fdate . " class='" . greyout($m, $currentmonth) . " daytile col-13 border_right' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
 	}
 ?>

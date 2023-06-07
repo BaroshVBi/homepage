@@ -1,5 +1,6 @@
 <?php
 	include("config.php");
+	require_once("functions.php");
 	$tab_weekday = array("Ndz", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob");
 	
 	$firstday = mktime(0, 0, 0, idate('m'), idate('d'), idate('Y'));
@@ -26,14 +27,4 @@
 		echo "<div id=" . $fdate . " class='daytile col-13 border_right' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
 	}
 	echo "</div>";
-	
-	function dot($count) {
-		if($count > 0) {
-			if ($count > 9) {
-				return "<div class='dot text_center'><p class='ver_center' style='font-size:1vw;'>+9</p></div>";
-			} else {
-				return "<div class='dot'><p>" . $count . "</p></div>";
-			}
-		}
-	}
 ?>

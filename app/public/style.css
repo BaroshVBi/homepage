@@ -115,6 +115,24 @@ button{
 	padding: 0.5vw;
 }
 
+.notify_title {
+	height: 20%;
+	font-size: 2vw;
+}
+
+	.notify_title div {
+		float: right;
+		font-size: 1vw;
+		position: relative;
+		top: 0;
+		right: 0;
+		color: grey;
+	}
+
+.notify_descr {
+	height: 75%;
+}
+
 .notify_tab_dot {
 	
 }
@@ -123,6 +141,7 @@ button{
 	height: 80%;
 	padding: 0;
 	overflow: hidden;
+	border-bottom: 1px #dadada solid;
 }
 
 #notify_tab_table {
