@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 05 Cze 2023, 16:37
+-- Czas generowania: 13 Cze 2023, 15:04
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -47,8 +47,7 @@ CREATE TABLE `calendar` (
   `id` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `user_login` varchar(11) NOT NULL,
-  `user_dn` text NOT NULL,
+  `user_id` varchar(11) NOT NULL,
   `title` text NOT NULL,
   `descr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -89,8 +88,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user_login` text NOT NULL,
   `user_dn` text NOT NULL,
-  `user_lvl` int(11) NOT NULL DEFAULT 1,
-  `tel` int(11) NOT NULL,
+  `user_lvl` int(11) NOT NULL DEFAULT 0,
   `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
