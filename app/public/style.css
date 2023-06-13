@@ -488,13 +488,29 @@ button{
 	height: 100%;
 }
 
+#add_event_button {
+	float: left;
+	font-size: 1vw;
+	color: white;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+	background-color: #6e79f3;
+	padding: 0.5vw;
+	border-radius: 1vw;
+	cursor: pointer;
+	transition: filter 0.35s;
+}
+
+	#add_event_button:hover {
+		filter: brightness(130%);
+	}
+
 /* side menu and main =========================================================*/
 
 .sidenav {
 	height: 100%; /* Full-height: remove this if you want "auto" height */
 	width: 12vw; /* Set the width of the sidebar */
 	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-	z-index: 1; /* Stay on top */
+	z-index: 2; /* Stay on top */
 	top: 0; /* Stay at the top */
 	left: 0;
 	background-color: #171f59; /* Black */
@@ -545,10 +561,12 @@ button{
 }
 
 .tabs {
+	position: fixed;
 	padding: 1vw;
 	display: none;
 	height: 100%;
-	width: 100%;
+	width: calc(100% - 12vw);
+	z-index: 0;
 }
 
 .tab_link_active {

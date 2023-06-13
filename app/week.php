@@ -24,7 +24,7 @@
 		$result = mysqli_query($db,$sql);
 		$count = mysqli_num_rows($result);
 		
-		echo "<div id=" . $fdate . " class='daytile col-13 border_right' onClick='focusTile(this.id)'><span>" . $d . "</span>" . dot($count) . "</div>";
+		echo "<div class='daytile col-13 border_right' onClick=\"focusTileWeek('$fdate')\"><span>" . $d . "</span>" . dot($count) . "</div>";
 	}
 	echo "</div>";
 ?>

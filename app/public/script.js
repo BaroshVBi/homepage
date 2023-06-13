@@ -84,6 +84,11 @@ function focusTile(id) {
 	}
 }
 
+function focusTileWeek(id) {
+	openTabs(document.getElementById("calendar_tab_1"), "calendar_tab1");
+	focusTile(id);
+}
+
 function collapse(el, elb) {
 	var content = document.getElementById(el);
 	
@@ -106,13 +111,17 @@ function closeSlideIn() {
 function openTabs(evt, tab) {
 	var tabs = document.getElementsByClassName("tabs");
 	for (i = 0; i < tabs.length; i++) {
-		tabs[i].style.display = "none";
+		$(tabs[i]).css({"z-index": "0"}).fadeOut(300);
+		//tabs[i].style.display = "none";
 	}
+	
 	var tab_links = document.getElementsByClassName("tab_links");
 	for (i = 0; i < tab_links.length; i++) {
 		tab_links[i].className = tab_links[i].className.replace("tab_link_active", "");
 	}
-	document.getElementById(tab).style.display = "block";
+	
+	$("#"+tab).css({"z-index": "1"}).fadeIn(300);
+	//document.getElementById(tab).style.display = "block";
 	evt.className += " tab_link_active";
 }
 
@@ -120,4 +129,8 @@ function notifyTab(el) {
 	$(".notify_tab_dot").children().css({"background-color": "grey"});
 	$(el).children().css({"background-color": "#6e79f3"});
 	$("#notify_tab_table").css({"left": "-" + ($(el).index() * 100) + "%"});
+}
+
+function redirect(string){
+	window.location.href = string;
 }

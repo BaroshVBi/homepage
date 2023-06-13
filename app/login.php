@@ -22,19 +22,34 @@
 						echo("Admin Login correct<br/>");
 						
 						$filter = '(sAMAccountName=' . $username . ')';
-						$attributes = array("name", "telephonenumber", "mail", "samaccountname");
+						$attributes = array("name", "mail", "samaccountname");
 						$result = ldap_search($ds, $ldap_root_dn, $filter, $attributes);
 						
 						$entries = ldap_get_entries($ds, $result);  
 						$ldap_user_dn = $entries[0]["name"][0];
+						$ldap_user_email = $entries[0]["mail"][0];
 						
 						if ($ldap_user_bind = ldap_bind($ds, $ldap_user_dn, $password)) {
 							echo "User Login Correct<br/>"; //Logged in.
+							
+							$sql = "SELECT id FROM users WHERE (user_login = '" . $username . "')";
+							$result = mysqli_query($db,$sql);
+							$count = mysqli_num_rows($result);
+							
+							if($count > 0) {
+								$sql = "UPDATE users SET user_dn = '" . $ldap_user_dn . "', email = '" . $ldap_user_email . "' WHERE users.user_login = '" . $username . "';";
+								$result = mysqli_query($db,$sql);
+							} else {
+								$sql = "INSERT INTO users (user_login, user_dn, email) VALUES ('" . $username . "', '" . $ldap_user_dn . "', '" . $ldap_user_email . "')";
+								$result = mysqli_query($db,$sql);
+							}
+							
 							// Create Session
 							$_SESSION['user_login'] = $username;
 							$_SESSION['user_dn'] = $ldap_user_dn;
+							
 							// Redirect
-							header("location:/app/eventManager.php");
+							header("location:eventManager.php");
 						} else {
 							echo "User Login Failed<br/>"; //Incorrect login details.
 							// Delete session
@@ -56,7 +71,7 @@
 				<label for="username">Login:</label><br>
 				<div class="col-12 margin_bottom_2vw">
 					<input type="image" class="col-2" src="public/icons/email.png" tabindex="-1"/>
-					<input type="text" class="col-10" name="username" placeholder="" id="email" required/>
+					<input type="text" class="col-10" name="username" placeholder="" id="username" required/>
 				</div>
 				<label for="password">Hasło:</label>
 				<div class="col-12 margin_bottom_2vw">

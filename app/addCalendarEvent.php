@@ -10,7 +10,7 @@
 	$descr = $_REQUEST["descr"];
 	
 	if(isset($date) && isset($time) && isset($title) && isset($descr)) {
-		$sql = "INSERT INTO calendar (date, time, user_login, user_dn, title, descr) VALUES ('" . $date . "', '" . $time . "', '" . $user_login . "', '" . $user_dn . "', '" . $title . "', '" . $descr . "')";
+		$sql = "INSERT INTO calendar (date, time, user_id, title, descr) VALUES ('" . $date . "', '" . $time . "', '" . $user_login . "', '" . $title . "', '" . $descr . "')";
 		$result = mysqli_query($db,$sql);
 		echo "Dodano event";
 	} else {

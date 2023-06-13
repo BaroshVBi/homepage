@@ -24,11 +24,11 @@
 						<th><img src="./public/icons/add.png"></th>
 						<th><span>Aplikacje</span></th>
 					</tr>
-					<tr class="tab_links " onClick="openTabs(this, 'calendar_tab1')">
+					<tr id="calendar_tab_1" class="tab_links " onClick="openTabs(this, 'calendar_tab1')">
 						<th><img src="./public/icons/calendar.png"></th>
 						<th><span>Kalendarz</span></th>
 					</tr>
-					<tr class="tab_links " onClick="openTabs(this, 'login_tab')">
+					<tr class="tab_links " onClick="redirect('login.php')">
 						<th><img src="./public/icons/avatar.png"></th>
 						<th><span>Login</span></th>
 					</tr>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div class="main">
-			<div id="dashboard_tab" class="tabs" style="display:block">
+			<div id="dashboard_tab" class="tabs" style="z-index:1; display:block;">
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
 						<?php include("displayNotifications.php"); ?>
