@@ -20,9 +20,10 @@
 				<th class="col-8 padding_0">
 					<?php
 						require_once("functions.php");
-						$date = date("Y-m-d");
-						if(isset($_REQUEST["new_event_date"])){
+						if(isset($_REQUEST["new_event_date"])) {
 							$date = $_REQUEST["new_event_date"];
+						} else {
+							$date = date("Y-m-d");
 						}
 						$date = strtotime($date);
 						echo"<input class='col-12 ' type='date' id='event_date' value='" . idate("Y", $date) . "-" . return00(idate('m', $date)) . "-" . return00(idate('d', $date)) . "'>"

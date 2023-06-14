@@ -126,25 +126,26 @@ button{
 
 .notify_title {
 	height: 20%;
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 
 	.notify_title div:first-child {
-		float:left;
-		width: 90%;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.notify_title div:last-child {
-		float: right;
-		width: 10%;
-		font-size: 40%;
+		float: left;
+		width: 100%;
+		font-size: 50%;
 		position: relative;
 		top: 0;
 		right: 0;
 		color: grey;
+		text-align: right;
+	}
+
+	.notify_title div:last-child {
+		float:left;
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 .notify_descr {
@@ -156,7 +157,7 @@ button{
 	border: none;
 	background-color: transparent;
 	resize: none;
-	font-size: 1vw;
+	font-size: 0.8vw;
 }
 
 	.notify_descr:focus {

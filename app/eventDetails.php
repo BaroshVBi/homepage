@@ -34,7 +34,7 @@
 							</tr>
 							<tr>
 								<th>Użytkownik:</th>
-								<th>" . $row['user_id'] . "</th>
+								<th>" . returnUserDN($row['user_id']) . "</th>
 							</tr>
 						</table>
 					</div>";
