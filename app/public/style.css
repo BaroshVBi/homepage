@@ -579,17 +579,21 @@ button{
 	items-align: center;
 }
 
-	#puw_logo img{
+	#puw_logo img {
 		height: 10vw;
 	}
 
-	#puw_logo div{
+	#puw_logo div {
 		text-decoration: none;
 		font-size: 1.5vw;
 		color: #f1f1f1;
 	}
 
 /* login ======================================================================*/
+
+#login_error {
+	text-align: center;
+}
 
 #login_form {
 	background-color: #ebebed;
