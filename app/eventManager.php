@@ -26,7 +26,7 @@
 							$date = date("Y-m-d");
 						}
 						$date = strtotime($date);
-						echo"<input class='col-12 ' type='date' id='event_date' value='" . idate("Y", $date) . "-" . return00(idate('m', $date)) . "-" . return00(idate('d', $date)) . "'>"
+						echo"<input class='col-12 ' type='date' id='event_date' value='" . idate("Y", $date) . "-" . return00(idate('m', $date)) . "-" . return00(idate('d', $date)) . "'>";
 					?>
 				</th>
 			</tr>

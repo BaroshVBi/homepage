@@ -64,23 +64,27 @@
 											//Logged in.
 											//echo "User Login Correct<br/>";
 											
-											$sql = "SELECT id FROM users WHERE (user_login = '" . $username . "')";
+											$sql = "SELECT id, config_recent_apps FROM users WHERE (user_login = '" . $username . "')";
 											$result = mysqli_query($db,$sql);
 											$count = mysqli_num_rows($result);
 											
+											// Create Session
+											$_SESSION['user_login'] = $username;
+											$_SESSION['user_dn'] = $ldap_user_dn;
+											
 											if($count > 0) {
-												//Przy kazdym nastepnym - aktualizacja danych
+												//Przy kazdym nastepnym logowaniu - aktualizacja danych
+												while ($row = $result->fetch_assoc()) {
+													$_SESSION['recent_apps'] = json_decode($row['config_recent_apps']);
+												}
 												$sql = "UPDATE users SET user_dn = '" . $ldap_user_dn . "', email = '" . $ldap_user_email . "' WHERE users.user_login = '" . $username . "';";
 												$result = mysqli_query($db,$sql);
 											} else {
 												//Przy pierwszym logowaniu - dodanie uzytkownika do bazy
 												$sql = "INSERT INTO users (user_login, user_dn, email) VALUES ('" . $username . "', '" . $ldap_user_dn . "', '" . $ldap_user_email . "')";
 												$result = mysqli_query($db,$sql);
+												$_SESSION['recent_apps'] = "[0,0,0,0,0]";
 											}
-											
-											// Create Session
-											$_SESSION['user_login'] = $username;
-											$_SESSION['user_dn'] = $ldap_user_dn;
 											
 											// Redirect
 											header("location:eventManager.php");

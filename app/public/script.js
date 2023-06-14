@@ -61,8 +61,31 @@ function showWeek(){
 	$.ajax({
 		type: "POST",
 		url:  "week.php",
-		success: function(data){
+		success: function(data) {
 		   $("#week").html(data);
+		}
+    });
+}
+
+function recentApps() {
+	$.ajax({
+		type: "POST",
+		url:  "recentApps.php",
+		success: function(data) {
+			$("#recent_apps").html(data);
+		}
+    });
+}
+
+function recentAppsUpdate(id) {
+	$.ajax({
+		type: "POST",
+		url:  "recentAppsUpdate.php",
+		data: {
+			'id': id
+		},
+		success: function(data) { 
+			recentApps();
 		}
     });
 }

@@ -83,6 +83,7 @@ button{
 
 .col-13 {width: 14.28%;} /* 7 kolumn - kalendarz */
 .col-14 {width: 12.5%;} /* 8 kolumn - apki */
+.col-15 {width: 20%;} /* 5 kolumn - ostatnio uzywane apki */
  
 [class*="col-"] {
 	float: left;
@@ -211,6 +212,8 @@ button{
 	height: auto;
 	margin: 0;
 	font-size: 1.0vw;
+	padding: 0.3%;
+	transition: filter 0.35s;
 }
 
 	.apptile a { 
@@ -225,14 +228,20 @@ button{
 		height: auto;
 	}
 
+	.apptile:hover {
+		filter:brightness(120%);
+	}
+
 .tytul {
 	position: absolute;
 	font-weight: normal;
-	left: 1.2vw;
-	bottom: 1vw;
+	left: 5%;
+	bottom: 4%;
+	width: 90%;
 }
 
 .container {
+	padding: 0.3%;
 	position: relative;
 	max-height: 0;
 	overflow: hidden;
@@ -264,15 +273,19 @@ button{
 	}
 
 .logo {
-	border: 5px solid #ebebed;
+	border: 0;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-	.logo:hover {
-		border: 5px solid #a7aaaf;
-		transition: 0.2s;
+	
+#recent_apps {
+	padding: 0.5%;
+}
+	
+	#recent_apps .apptile {
+		padding: 0.5%;
+		font-size: 0.8vw;
 	}
 
 /* calendar ===================================================================*/
@@ -613,6 +626,7 @@ button{
 	}
 	
 	#login_form input[type=submit] {
+		font-size: 1vw;
 		aspect-ratio: 12/2;
 		border: none;
 		background-color: #51269b;
