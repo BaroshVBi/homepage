@@ -69,11 +69,11 @@
 											$count = mysqli_num_rows($result);
 											
 											if($count > 0) {
-												//Przy pierwszym logowaniu - dodanie uzytkownika do bazy
+												//Przy kazdym nastepnym - aktualizacja danych
 												$sql = "UPDATE users SET user_dn = '" . $ldap_user_dn . "', email = '" . $ldap_user_email . "' WHERE users.user_login = '" . $username . "';";
 												$result = mysqli_query($db,$sql);
 											} else {
-												//Przy kazdym nastepnym - aktualizacja danych
+												//Przy pierwszym logowaniu - dodanie uzytkownika do bazy
 												$sql = "INSERT INTO users (user_login, user_dn, email) VALUES ('" . $username . "', '" . $ldap_user_dn . "', '" . $ldap_user_email . "')";
 												$result = mysqli_query($db,$sql);
 											}
