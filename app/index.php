@@ -48,26 +48,19 @@
 						<div id="week" class="col-12 padding_0"><?php include("week.php"); ?></div>
 					</div>
 				</div>
+				<?php include("recentApps.php"); ?>
 				<div class="col-6">
-					<div id="recent_apps" class="dmenu col-12 box_shadow">
-						<?php include("recentApps.php"); ?>
+					<div class="dmenu col-12 box_shadow">
+						<?php include("appUsage.php"); ?>
 					</div>
 				</div>
+<!--			
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
 						Ulubione - zalogowany uzytkownik
 					</div>
 				</div>
-				<div class="col-6">
-					<div class="dmenu col-12 box_shadow">
-						Często Używane - statystyka z bazy danych
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="dmenu col-12 box_shadow">
-						
-					</div>
-				</div>
+-->
 			</div>
 			
 			<div id="apps_tab" class="tabs"> 

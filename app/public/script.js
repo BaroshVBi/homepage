@@ -2,7 +2,7 @@ var m = 0;
 var tab_month = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 var c = new Date();
 var currentday = "" + c.getFullYear() + "-" + (c.getMonth() + 1) + "-" + c.getDate() + "";
-
+var today = currentday;
 showMonth(0);
 //showWeek();
 
@@ -23,6 +23,7 @@ function showMonth(k) {
 		if (this.readyState == 4 && this.status == 200) {
 			document.getElementById("calendar_month").innerHTML = this.responseText;
 			focusTile(currentday);
+			$("#" + today).css({"border": "solid 0.1vw #6e79f3"});
 		}
 	}
 	xhttp.open("GET", "calendar.php?m=" + m, true);
