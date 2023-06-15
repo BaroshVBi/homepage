@@ -1,6 +1,8 @@
 <?php
 	$sql = "SELECT * FROM apps ORDER BY apps.app_usage DESC LIMIT 5";
 	$result = mysqli_query($db,$sql);
+	echo "<div class='db_apps_title col-12'>Najczęściej Używane Aplikacje</div>";
+	echo "<div class='db_apps_container col-12'>";
 	if($result->num_rows > 0){
 		while($row = $result->fetch_assoc()){
 			echo "<div class='apptile col-15'>
@@ -13,4 +15,5 @@
 				</div>";
 		}
 	}
+	echo "</div>";
 ?>

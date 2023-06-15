@@ -45,18 +45,22 @@
 				</div>
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
-						<div id="week" class="col-12 padding_0"><?php include("week.php"); ?></div>
+						<div id="week" class="col-12 padding_0">
+							<?php include("week.php"); ?>
+						</div>
 					</div>
 				</div>
-				<?php include("recentApps.php"); ?>
+				<div id="recent_apps">
+					<?php include("recentApps.php"); ?>
+				</div>
 				<div class="col-6">
-					<div class="dmenu col-12 box_shadow">
+					<div class="db_apps dmenu col-12 box_shadow">
 						<?php include("appUsage.php"); ?>
 					</div>
 				</div>
 <!--			
 				<div class="col-6">
-					<div class="dmenu col-12 box_shadow">
+					<div class="db_apps dmenu col-12 box_shadow">
 						Ulubione - zalogowany uzytkownik
 					</div>
 				</div>

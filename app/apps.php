@@ -9,7 +9,7 @@
 			$html_id = "" . $row1["id"] . $row1["name"] . "";
 			echo "<div class='category_button col-12' onClick=\"collapse('$html_id', this);\">" . $row1["name"] . "</div><div id='" . $html_id . "' class='container col-12' style='max-height:100%;'>";
 			
-			$sql = "SELECT * FROM apps WHERE app_category_id=" . $row1["id"];
+			$sql = "SELECT * FROM apps WHERE app_category_id = " . $row1["id"] . " ORDER BY apps.app_name ASC";
 			$result = mysqli_query($db,$sql);
 			if($result->num_rows > 0){
 				while($row = $result->fetch_assoc()){

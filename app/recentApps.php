@@ -4,7 +4,9 @@
 	@session_start();
 	
 	if(isset($_SESSION['recent_apps'])){
-		echo "<div class='col-6'><div id='recent_apps' class='dmenu col-12 box_shadow'>";
+		echo "<div class='col-6'><div class='db_apps dmenu col-12 box_shadow'>";
+		echo "<div class='db_apps_title col-12'>Ostatnio Używane Aplikacje</div>";
+		echo "<div class='db_apps_container col-12'>";
 		for($i = 0; $i <= 4; $i++) {
 			$sql = "SELECT * FROM apps WHERE id=" . $_SESSION['recent_apps'][$i];
 			$result = mysqli_query($db,$sql);
@@ -21,6 +23,6 @@
 				}
 			}
 		}
-		echo "</div></div>";
+		echo "</div></div></div>";
 	}
 ?>

@@ -279,14 +279,22 @@ button{
 	background-size: cover;
 }
 	
-#recent_apps {
-	padding: 0.5%;
+.db_apps {
 }
 	
-	#recent_apps .apptile {
+	.db_apps .apptile {
 		padding: 0.5%;
 		font-size: 0.8vw;
 	}
+
+.db_apps_title {
+	font-size: 1.0vw;
+	border-bottom: 1px #dadada solid;
+}
+
+.db_apps_container {
+	padding: 0.5%;
+}
 
 /* calendar ===================================================================*/
 
