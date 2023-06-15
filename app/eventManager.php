@@ -37,43 +37,51 @@
 			</div>
 		
 			<div id="add_event_tab" class="tabs" style="z-index:1; display:block;">
-				<div id="info"></div>
-				<table id="form_calendar" class="col-5">
-					<tr>
-						<th class="active" colspan="2"><label class="col-12">Nowe Wydarzenie</label></th>
-					</tr>
-					<tr class="">
-						<th class="col-4 padding_0 active"><label class="col-12" for="event_date">Data</label></th>
-						<th class="col-8 padding_0">
-							<?php
-								require_once("functions.php");
-								if(isset($_REQUEST["new_event_date"])) {
-									$date = $_REQUEST["new_event_date"];
-								} else {
-									$date = date("Y-m-d");
-								}
-								$date = strtotime($date);
-								echo"<input class='col-12 ' type='date' id='event_date' value='" . idate("Y", $date) . "-" . return00(idate('m', $date)) . "-" . return00(idate('d', $date)) . "'>";
-							?>
-						</th>
-					</tr>
-					<tr class="">
-						<th class="col-4 padding_0 active"><label class="col-12" for="event_date">Godzina</label></th>
-						<th class="col-8 padding_0"><input class="col-12" type="time" id="event_time"></th>
-					</tr>
-					<tr class="">
-						<th class="col-4 padding_0 active"><label class="col-12" for="event_date">Tytuł</label></th>
-						<th class="col-8 padding_0"><input class="col-12" type="input" id="event_title"></th>
-					</tr>
-					<tr class="">
-						<th class="col-4 padding_0 active"><label class="col-12" for="event_date">Opis</label></th>
-						<th class="col-8 padding_0"><textarea class="col-12" id="event_descr"></textarea></th>
-					</tr>
-					<tr class="">
-						<th class="" colspan="2"><input class="col-12" type="button" value="Dodaj Event" onClick="addCalendarEvent();"></th>
-					</tr>
-				</table>
+				<div class="col-6">
+					<div id="info"></div>
+					<form>
+						<table id="form_calendar" class="col-12">
+							<tr>
+								<th colspan="2"><label class="col-12">Nowe Wydarzenie</label></th>
+							</tr>
+							<tr>
+								<th style="width:30%;"><label for="event_date">Data</label></th>
+								<th>
+									<?php
+										require_once("functions.php");
+										if(isset($_REQUEST["new_event_date"])) {
+											$date = $_REQUEST["new_event_date"];
+										} else {
+											$date = date("Y-m-d");
+										}
+										$date = strtotime($date);
+										echo"<input class='col-12 ' type='date' id='event_date' value='" . idate("Y", $date) . "-" . return00(idate('m', $date)) . "-" . return00(idate('d', $date)) . "' required>";
+									?>
+								</th>
+							</tr>
+							<tr>
+								<th><label class="col-12" for="event_date">Godzina</label></th>
+								<th><input class="col-12" type="time" id="event_time" required></th>
+							</tr>
+							<tr>
+								<th><label class="col-12" for="event_date">Tytuł</label></th>
+								<th><input class="col-12" type="input" id="event_title" required></th>
+							</tr>
+							<tr>
+								<th><label class="col-12" for="event_date">Opis (opcjonalne)</label></th>
+								<th><textarea class="col-12" id="event_descr"></textarea></th>
+							</tr>
+							<tr>
+								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Event" onClick="addCalendarEvent();"></th>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div class="col-6">
+				
+				</div>
 			</div>
+		</div>
 		<script src="public/jquery-3.6.3.min.js"></script>
 		<script src="public/script.js"></script>
 	</body>
