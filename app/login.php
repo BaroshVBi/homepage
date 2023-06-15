@@ -76,6 +76,7 @@
 												//Przy kazdym nastepnym logowaniu - aktualizacja danych
 												while ($row = $result->fetch_assoc()) {
 													$_SESSION['recent_apps'] = json_decode($row['config_recent_apps']);
+													$_SESSION['user_id'] = $row['id'];
 												}
 												$sql = "UPDATE users SET user_dn = '" . $ldap_user_dn . "', email = '" . $ldap_user_email . "' WHERE users.user_login = '" . $username . "';";
 												$result = mysqli_query($db,$sql);
