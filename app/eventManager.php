@@ -77,7 +77,7 @@
 						</table>
 					</form>
 				</div>
-				<div class="col-6">
+				<div id="view_events" class="col-6">
 					<?php include("viewEvents.php") ?>
 				</div>
 			</div>

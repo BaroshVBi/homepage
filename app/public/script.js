@@ -107,6 +107,32 @@ function addCalendarEvent() {
     });
 }
 
+function deleteEvent(id) {
+	let text = "Czy napewno chcesz usunąć Wydarzenie nr #" + id + "?";
+	if (confirm(text) == true) {
+		$.ajax({
+			type: "POST",
+			url:  "deleteEvent.php",
+			data: {
+				'id': id
+			},
+			success: function(data) { 
+				viewEvents()
+			}
+		});
+	}
+}
+
+function viewEvents() {
+	$.ajax({
+		type: "POST",
+		url:  "viewEvents.php",
+		success: function(data) { 
+			$("#view_events").html(data);
+		}
+    });
+}
+
 function focusTile(id) {
 	var tile = document.getElementById(id);
 	if(tile != null) {
