@@ -15,7 +15,7 @@
 	echo "<table id='calendar_events' class='col-12' style='padding-top:0'>";
 	if($count > 0){
 		while ($row = $result->fetch_assoc()) {
-			echo "<tr class='event_button' onClick='eventDetails(" . $row['id'] . ", this)'><th style='width:20%'>" . date('H:i', strtotime($row['time'])) . "</th><th style='width:80%'>" . $row['title'] . "</th></tr>";
+			echo "<tr class='event_button' onClick='eventDetails(" . $row['id'] . ")'><th style='width:20%'>" . date('H:i', strtotime($row['time'])) . "</th><th style='width:80%'>" . $row['title'] . "</th></tr>";
 		}
 	} 
 	else {

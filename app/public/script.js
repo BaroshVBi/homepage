@@ -3,7 +3,8 @@ var tab_month = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "
 var c = new Date();
 var currentday = "" + c.getFullYear() + "-" + (c.getMonth() + 1) + "-" + c.getDate() + "";
 var today = currentday;
-showMonth(0);
+
+//showMonth(0);
 //showWeek();
 
 //window.addEventListener('load', function () {
@@ -18,44 +19,51 @@ function showMonth(k) {
 	d.setMonth(d.getMonth() + m);
 	document.getElementById("cal").innerHTML = "<b>" + tab_month[d.getMonth()] + " " + d.getFullYear() + "</b>";
 	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("calendar_month").innerHTML = this.responseText;
+	$.ajax({
+		type: "POST",
+		url:  "calendar.php",
+		data: {
+			'm': m
+		},
+		success: function(data) { 
+			$("#calendar_month").html(data);
 			focusTile(currentday);
 			$("#" + today).css({"border": "solid 0.1vw #6e79f3"});
 		}
-	}
-	xhttp.open("GET", "calendar.php?m=" + m, true);
-	xhttp.send();
+    });
 }
 
 function showDay(id) {
-	var xhttp = new XMLHttpRequest();
 	$("#calendar_events tr").hide(500);
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("calendar_day").innerHTML = this.responseText;
+	
+	$.ajax({
+		type: "POST",
+		url:  "calendarDay.php",
+		data: {
+			'id': id
+		},
+		success: function(data) { 
+			$("#calendar_day").html(data);
 			$("#calendar_events tr").hide();
 			$("#calendar_events tr").each(function(index) {
 				$(this).delay(index*200).show(500);
 			});
 		}
-	}
-	xhttp.open("GET", "calendarDay.php?id=" + id, true);
-	xhttp.send();
+    });
 }
 
-function eventDetails(id, el) {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("event_details").innerHTML = this.responseText;
+function eventDetails(id) {
+	$.ajax({
+		type: "POST",
+		url:  "eventDetails.php",
+		data: {
+			'id': id
+		},
+		success: function(data) { 
+			$("#event_details").html(data);
 			$("#event_details").animate({"right": "0"});
 		}
-	}
-	xhttp.open("GET", "eventDetails.php?id=" + id, true);
-	xhttp.send();
+    });
 }
 
 function showWeek(){

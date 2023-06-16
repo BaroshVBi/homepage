@@ -2,7 +2,10 @@
 	include("config.php");
 	require_once("functions.php");
 	
-	$m = $_REQUEST["m"];
+	$m = 0;
+	if(isset($_REQUEST["m"])) {
+		$m = $_REQUEST["m"];
+	}
 	$firstday = mktime(0, 0, 0, idate('m') + $m, 1, idate('Y'));
 	$currentmonth = idate('m', $firstday);
 	

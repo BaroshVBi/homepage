@@ -87,7 +87,9 @@
 						<div class="col-13 border_right">Sobota</div>
 						<div class="col-13 border_right">Niedziela</div>
 					</div>
-					<div id="calendar_month" class="col-12 padding_0"></div>
+					<div id="calendar_month" class="col-12 padding_0">
+						<?php include("calendar.php"); ?>
+					</div>
 				</div>
 				<div id="calendar_day" class="col-4 padding_0">
 				</div>
@@ -103,5 +105,8 @@
 		</div>
 		<script src="public/jquery-3.6.3.min.js"></script>
 		<script src="public/script.js"></script>
+		<script type="text/javascript">
+			showMonth(0);
+		</script>
 	</body>
 </html>
