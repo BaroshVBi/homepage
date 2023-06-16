@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Cze 2023, 15:04
+-- Czas generowania: 16 Cze 2023, 13:28
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -34,7 +34,8 @@ CREATE TABLE `apps` (
   `app_link` text NOT NULL,
   `app_logo_link` text NOT NULL,
   `app_bg_link` text NOT NULL,
-  `app_bg_color` text NOT NULL
+  `app_bg_color` text NOT NULL,
+  `app_usage` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -89,7 +90,8 @@ CREATE TABLE `users` (
   `user_login` text NOT NULL,
   `user_dn` text NOT NULL,
   `user_lvl` int(11) NOT NULL DEFAULT 0,
-  `email` text NOT NULL
+  `email` text NOT NULL,
+  `config_recent_apps` text NOT NULL DEFAULT '[0,0,0,0,0]'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
