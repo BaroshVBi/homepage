@@ -13,6 +13,10 @@
 			$sql = "INSERT INTO calendar (date, time, user_id, title, descr) VALUES ('" . $date . "', '" . $time . "', '" . $id . "', '" . $title . "', '" . $descr . "')";
 			$result = mysqli_query($db,$sql);
 			echo "Dodano Wydarzenie do Kalendarza";
+			
+			if(isset($_REQUEST["new_event_date"])) {
+				unset($_REQUEST["new_event_date"]);
+			}
 		} else {
 			echo "Wypełnij Formularz";
 		}

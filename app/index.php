@@ -5,6 +5,8 @@
 		<meta charset='UTF-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv='Cache-control' content='no-store'>
+		<script src="public/jquery-3.6.3.min.js"></script>
+		<script src="public/script.js"></script>
 	</head>
 	<body>
 		<!--<div id='loading'></div>-->
@@ -103,8 +105,6 @@
 		<div id="event_details" class="slide_in">
 			
 		</div>
-		<script src="public/jquery-3.6.3.min.js"></script>
-		<script src="public/script.js"></script>
 		<script type="text/javascript">
 			showMonth(0);
 		</script>
