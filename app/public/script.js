@@ -111,6 +111,7 @@ function addCalendarEvent() {
 		},
 		success: function(data){
 		   $("#info").html(data);
+		   viewEvents();
 		}
     });
 }
@@ -125,7 +126,7 @@ function deleteEvent(id) {
 				'id': id
 			},
 			success: function(data) { 
-				viewEvents()
+				viewEvents();
 			}
 		});
 	}
@@ -137,6 +138,48 @@ function viewEvents() {
 		url:  "viewEvents.php",
 		success: function(data) { 
 			$("#view_events").html(data);
+		}
+    });
+}
+
+function addNotification() {
+    $.ajax({
+		type: "POST",
+		url:  "addNotification.php",
+		data: {
+			
+			'title': $('#notify_title').val(),
+			'descr': $('#notify_descr').val()
+		},
+		success: function(data){
+		   $("#infoN").html(data);
+		   viewNotification();
+		}
+    });
+}
+
+function deleteNotification(id) {
+	let text = "Czy napewno chcesz usunąć Powiadomienie nr #" + id + "?";
+	if (confirm(text) == true) {
+		$.ajax({
+			type: "POST",
+			url:  "deleteNotification.php",
+			data: {
+				'id': id
+			},
+			success: function(data) { 
+				viewNotification();
+			}
+		});
+	}
+}
+
+function viewNotification() {
+	$.ajax({
+		type: "POST",
+		url:  "viewNotification.php",
+		success: function(data) { 
+			$("#view_notifications").html(data);
 		}
     });
 }

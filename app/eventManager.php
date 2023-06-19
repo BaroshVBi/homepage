@@ -35,7 +35,30 @@
 		</div>
 		<div class="main">
 			<div id="add_notification_tab" class="tabs" style="z-index:1; display:block;">
-			
+				<div class="col-6">
+					<div id="infoN"></div>
+					<form>
+						<table id="form_calendar" class="col-12">
+							<tr>
+								<th colspan="2"><label class="col-12">Nowe Powiadomienie</label></th>
+							</tr>
+							<tr>
+								<th><label class="col-12" for="event_date">Tytuł</label></th>
+								<th><input class="col-12" type="input" id="notify_title" required></th>
+							</tr>
+							<tr>
+								<th><label class="col-12" for="event_date">Opis (opcjonalne)</label></th>
+								<th><textarea class="col-12" id="notify_descr"></textarea></th>
+							</tr>
+							<tr>
+								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Powiadomienie" onClick="addNotification();"></th>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div id="view_notifications" class="col-6">
+					<?php include("viewNotifications.php") ?>
+				</div>
 			</div>
 		
 			<div id="add_event_tab" class="tabs">
@@ -77,7 +100,7 @@
 								<th><textarea class="col-12" id="event_descr"></textarea></th>
 							</tr>
 							<tr>
-								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Event" onClick="addCalendarEvent();"></th>
+								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Wydarzenie" onClick="addCalendarEvent();"></th>
 							</tr>
 						</table>
 					</form>

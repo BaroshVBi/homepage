@@ -566,6 +566,12 @@ button{
 	overflow-y: auto;
 }
 
+#view_notifications{
+	height: 100%;
+	padding: 0;
+	overflow-y: auto;
+}
+
 /* side menu and main =========================================================*/
 
 .sidenav {
