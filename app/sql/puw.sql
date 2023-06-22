@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 16 Cze 2023, 13:28
+-- Czas generowania: 22 Cze 2023, 15:06
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -91,7 +91,7 @@ CREATE TABLE `users` (
   `user_dn` text NOT NULL,
   `user_lvl` int(11) NOT NULL DEFAULT 0,
   `email` text NOT NULL,
-  `config_recent_apps` text NOT NULL DEFAULT '[0,0,0,0,0]'
+  `config_recent_apps` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
