@@ -285,6 +285,7 @@ button{
 }
 	
 .db_apps {
+	
 }
 	
 	.db_apps .apptile {
@@ -299,6 +300,10 @@ button{
 
 .db_apps_container {
 	padding: 0.5%;
+}
+
+#apps_tab {
+	overflow-y: auto;
 }
 
 /* calendar ===================================================================*/
@@ -663,12 +668,12 @@ button{
 }
 
 #login_form {
-	background-color: #ebebed;
+	background-color: white;
 	color: #51269b;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
 
 	#login_form input {
-		background-color: #ebebed;
 		border: none;
 		border-bottom: 1px #51269b solid;
 		aspect-ratio: 5/1;

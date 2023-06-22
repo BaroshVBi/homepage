@@ -20,11 +20,11 @@
 							</tr>
 							<tr>
 								<th style='width:20%'>Tytuł:</th>
-								<th colspan='3' style='width:80%'>" . $row["title"] . "</th>
+								<th colspan='3' style='width:80%; font-weight: 100; text-align: left;'>" . $row["title"] . "</th>
 							</tr>
 							<tr>
 								<th style='width:20%'>Opis:</th>
-								<th colspan='3' style='width:80%'>" . $row["descr"] . "</th>
+								<th colspan='3' style='width:80%; font-weight: 100; text-align: left;'>" . $row["descr"] . "</th>
 							</tr>
 						</table>
 					</div>";

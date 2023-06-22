@@ -18,6 +18,10 @@
 			</br>
 			<div>
 				<table>
+					<tr class="tab_links " onClick="redirect('index.php')">
+						<th><img src="./public/icons/home.png"></th>
+						<th><span>Strona Główna</span></th>
+					</tr>
 					<tr id="add_notification_link" class="tab_links tab_link_active" onClick="openTabs(this, 'add_notification_tab')">
 						<th><img src="./public/icons/notification.png"></th>
 						<th><span>Powiadomienia</span></th>
@@ -47,11 +51,11 @@
 								<th><input class="col-12" type="input" id="notify_title" required></th>
 							</tr>
 							<tr>
-								<th><label class="col-12" for="event_date">Opis (opcjonalne)</label></th>
-								<th><textarea class="col-12" id="notify_descr"></textarea></th>
+								<th><label class="col-12" for="event_date">Opis</label></th>
+								<th><textarea class="col-12" id="notify_descr" required></textarea></th>
 							</tr>
 							<tr>
-								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Powiadomienie" onClick="addNotification();"></th>
+								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Powiadomienie" onClick="addNotification();" style="color: white; background-color: #6e79f3;"></th>
 							</tr>
 						</table>
 					</form>
@@ -100,7 +104,7 @@
 								<th><textarea class="col-12" id="event_descr"></textarea></th>
 							</tr>
 							<tr>
-								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Wydarzenie" onClick="addCalendarEvent();"></th>
+								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Wydarzenie" onClick="addCalendarEvent();" style="color: white; background-color: #6e79f3;"></th>
 							</tr>
 						</table>
 					</form>
