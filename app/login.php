@@ -82,9 +82,10 @@
 												$result = mysqli_query($db,$sql);
 											} else {
 												//Przy pierwszym logowaniu - dodanie uzytkownika do bazy
-												$sql = "INSERT INTO users (user_login, user_dn, email, config_recent_apps) VALUES ('" . $username . "', '" . $ldap_user_dn . "', '" . $ldap_user_email . "', '[0,0,0,0,0]')";
+												$sql = "INSERT INTO users (user_login, user_dn, email, config_recent_apps) VALUES ('" . $username . "', '" . $ldap_user_dn . "', '" . $ldap_user_email . "', '[0,0,0,0,0]');";
 												$result = mysqli_query($db,$sql);
-												$_SESSION['recent_apps'] = "[0,0,0,0,0]";
+												$_SESSION['recent_apps'] = json_decode("[0,0,0,0,0]");
+												$_SESSION['user_id'] = mysqli_insert_id($db);
 											}
 											
 											// Redirect
