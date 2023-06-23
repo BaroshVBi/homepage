@@ -16,7 +16,7 @@
 								<th style='width:20%'>#" . $row["id"] . "</th>
 								<th style='width:30%'>" . returnDate($row["date"]) . "</th>
 								<th style='width:30%'>" . date('H:i', strtotime($row['time'])) . "</th>
-								<th class='cursor_pointer' style='width:20%' onClick='deleteEvent(" . $row["id"] . ")'>Usuń</th>
+								<th class='cursor_pointer' style='width:20%' onClick='deleteNotification(" . $row["id"] . ")'>Usuń</th>
 							</tr>
 							<tr>
 								<th style='width:20%'>Tytuł:</th>

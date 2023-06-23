@@ -147,13 +147,12 @@ function addNotification() {
 		type: "POST",
 		url:  "addNotification.php",
 		data: {
-			
 			'title': $('#notify_title').val(),
 			'descr': $('#notify_descr').val()
 		},
 		success: function(data){
 		   $("#infoN").html(data);
-		   viewNotification();
+		   viewNotifications();
 		}
     });
 }
@@ -168,16 +167,16 @@ function deleteNotification(id) {
 				'id': id
 			},
 			success: function(data) { 
-				viewNotification();
+				viewNotifications();
 			}
 		});
 	}
 }
 
-function viewNotification() {
+function viewNotifications() {
 	$.ajax({
 		type: "POST",
-		url:  "viewNotification.php",
+		url:  "viewNotifications.php",
 		success: function(data) { 
 			$("#view_notifications").html(data);
 		}
