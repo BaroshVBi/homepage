@@ -2,6 +2,7 @@
 	<head>
 		<?php include("session.php"); ?>
 		<link rel="stylesheet" href="public/style.css">
+		<link rel="icon" type="image/x-icon" href="public/icons/logo.png">
 		<meta charset='UTF-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv='Cache-control' content='no-store'>
