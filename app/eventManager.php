@@ -56,7 +56,7 @@
 								<th><textarea class="col-12" id="notify_descr" required></textarea></th>
 							</tr>
 							<tr>
-								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Powiadomienie" onClick="addNotification();" style="color: white; background-color: #6e79f3;"></th>
+								<th colspan="2"><input class="col-12" type="button" value="Dodaj Powiadomienie" onClick="addNotification();" style="color: white; background-color: #6e79f3;"></th>
 							</tr>
 						</table>
 					</form>
@@ -105,7 +105,7 @@
 								<th><textarea class="col-12" id="event_descr"></textarea></th>
 							</tr>
 							<tr>
-								<th colspan="2"><input class="col-12" type="submit" value="Dodaj Wydarzenie" onClick="addCalendarEvent();" style="color: white; background-color: #6e79f3;"></th>
+								<th colspan="2"><input class="col-12" type="button" value="Dodaj Wydarzenie" onClick="addCalendarEvent();" style="color: white; background-color: #6e79f3;"></th>
 							</tr>
 						</table>
 					</form>

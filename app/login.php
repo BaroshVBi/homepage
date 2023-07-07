@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv='Cache-control' content='no-store'>
 	</head>
-	<body>
+	<body style="height:100%">
 		<div id="login_form" class="col-2 center">
 			<h2 class="col-12 text_center margin_bottom_2vw">Zaloguj się</h2>
 			<form action="" method="post">
