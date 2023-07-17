@@ -32,6 +32,10 @@
 						<th><img src="./public/icons/calendar.png"></th>
 						<th><span>Kalendarz</span></th>
 					</tr>
+					<tr class="tab_links " onClick="openTabs(this, 'contact_tab')">
+						<th><img src="./public/icons/contact.png"></th>
+						<th><span>Kontakt</span></th>
+					</tr>
 					<tr class="tab_links " onClick="redirect('login.php')">
 						<th><img src="./public/icons/avatar.png"></th>
 						<th><span>Login</span></th>
@@ -97,7 +101,9 @@
 				<div id="calendar_day" class="col-4 padding_0">
 				</div>
 			</div>
-			
+			<div id="contact_tab" class="tabs">
+				<?php include("contactList.php"); ?>
+			</div>
 			<div id="login_tab" class="tabs">
 				login
 			</div>
