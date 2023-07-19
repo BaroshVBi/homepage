@@ -75,6 +75,10 @@
 			</div>
 			
 			<div id="apps_tab" class="tabs"> 
+				<div class="search_div col-4 hor_center">
+					<input id="search_app" class="searchbar" onkeyup="search(this.id, 'search_app')" type="text" name="search" placeholder="Wyszukaj...">
+					<input type="image" class="searchbar_icon" src="public/icons/search.png"/>
+				</div>
 				<?php include("apps.php"); ?>
 			</div>
 			

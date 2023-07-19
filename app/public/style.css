@@ -72,6 +72,10 @@ button{
 	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
  
+.no_hover {
+	pointer-events: none;
+}
+ 
  /*1-12 podział ekranu na 12 kolumn */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -646,6 +650,91 @@ button{
 .tab_link_active {
 	color: #f1f1f1;
 	background-color: #434c8d;
+}
+
+.scroll_list{
+	color: white;
+	font-size: 1.1vw;
+}
+	.scroll_list th{
+		padding: 0.2vw; 
+	}
+	
+	.scroll_list tr {
+		pointer-events: all;
+		transition: 0.3s;
+	}
+	
+		.scroll_list tr:hover {
+			color: #f1f1f1;
+			background-color: #515aa1;
+			cursor: pointer;
+		}
+
+.contact_list {
+	font-size: 1vw;
+	width: 100%;
+	border: solid 1px black;
+	border-spacing: 0;
+	margin: auto;
+}
+
+	.contact_list td, .contact_list th {
+		border: solid 1px black;
+		padding: 10px;
+		text-align: center;
+		font-weight: 100;
+	}
+	
+	.contact_list th {
+		border-bottom: none;
+		border-top: none;
+	}
+	
+	.contact_list td {
+		font-size: 150%;
+		background-color: #6e79f3;
+		color: white;
+	}
+	
+	.contact_list b {
+		font-weight: 600;
+	}
+	
+	.contact_list tr {
+		background-color: #e5e5e5;
+	}
+	
+	.contact_list tr:nth-child(2n) {
+		background-color: #ffffff
+	}
+	
+.mail_icon {
+	height: 1vw;
+	float: left;
+}
+
+.searchbar {
+	border: none;
+	width: calc(100% - 3vw);
+	height: 2vw;
+	margin-left: 1vw;
+	float: left;
+	outline: none;
+}
+
+.searchbar_icon {
+	padding: 0.5vw;
+	height: 2vw;
+	float: left;
+}
+
+.search_div {
+	background-color: white;
+	border: solid 1px black;
+	border-radius: 25px;
+	padding: 0;
+	margin-bottom: 1.0vw;
 }
 
 #puw_logo {

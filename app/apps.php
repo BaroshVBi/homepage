@@ -14,7 +14,7 @@
 				echo "<div id='" . $html_id . "' class='container col-12' style='max-height:100%;'>";
 				
 				while($row = $result->fetch_assoc()){
-					echo "	<div class='apptile col-14'>
+					echo "	<div class='search_app apptile col-14'>
 								<a target='_blank' href='" . $row["app_link"] . "' onClick='recentAppsUpdate(" . $row["id"] .")'>
 									<div class='logo' style='background-image: url(public/logo/" . $row["app_bg_link"] . ");background-color:#" . $row["app_bg_color"] . "'>
 										<img src='public/logo/" . $row["app_logo_link"] . "'>
