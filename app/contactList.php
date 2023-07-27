@@ -11,7 +11,7 @@
 			require_once("SimpleXLSX.php");
 			
 			//Wewnetrzne
-			if ($xlsx = SimpleXLSX::parse('public/contactList.xlsx')) {
+			if ($xlsx = SimpleXLSX::parse('public/contact/contactList.xlsx')) {
 				$names =  $xlsx->rows(0);
 				$count_rows = count($names);
 				for($i = 0; $i < $count_rows; $i++) {
@@ -41,7 +41,7 @@
 			}
 			
 			//Inne
-			if ($xlsx = SimpleXLSX::parse('public/contactListOther.xlsx')) {
+			if ($xlsx = SimpleXLSX::parse('public/contact/contactListOther.xlsx')) {
 				$names =  $xlsx->rows(0);
 				$count_rows = count($names);
 				for($i = 0; $i < $count_rows; $i++) {

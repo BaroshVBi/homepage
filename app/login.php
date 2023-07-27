@@ -25,6 +25,10 @@
 						include("config.php");
 						session_start();
 						
+						if(isset($_SESSION['user_login'])){
+							header("location:eventManager.php");
+						}
+						
 						//https://gist.github.com/heiglandreas/5689592
 						//https://github.com/anthony-b/simple-php-LDAP-Authentication
 						

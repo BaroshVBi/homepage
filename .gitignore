@@ -5,3 +5,6 @@ app/public/contactList.xlsx
 app/public/~$contactList.xlsx
 app/public/~$contactListOther.xlsx
 app/public/contactListOther.xlsx
+app/public/contact/contactList.xlsx
+app/public/contact/contactListOther.xlsx
+app/websiteCheck.php
