@@ -65,6 +65,11 @@
 						<?php include("appUsage.php"); ?>
 					</div>
 				</div>
+				<div class="col-6">
+					<div class="db_apps dmenu col-12 box_shadow">
+						<?php include("recentlyAddedApps.php"); ?>
+					</div>
+				</div>
 <!--			
 				<div class="col-6">
 					<div class="db_apps dmenu col-12 box_shadow">
