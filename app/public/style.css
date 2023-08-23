@@ -125,6 +125,15 @@ button{
 	transition: 0.5s;
 }
 
+#stats th {
+	border: black 1px solid;
+	padding: 5px;
+}
+
+#stats tr:nth-child(2n) th {
+		background-color: lightgrey;
+	}
+
 /* dashboard ==================================================================*/
 
 .notify_tab {
