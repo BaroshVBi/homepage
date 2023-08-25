@@ -116,6 +116,10 @@ button{
 	padding: 0;
 }
 
+.spacer {
+	width: 0.1vw;
+}
+
 #loading {
 	position: fixed;
 	z-index: 2;
@@ -221,6 +225,86 @@ button{
 	height: 20%;
 	text-align: center;
 }
+
+#add_notification {
+	float: left;
+	font-size: 1.0vw;
+	color: white;
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+	background-color: #6e79f3;
+	padding: 0.3vw;
+	border-radius: 1vw;
+	cursor: pointer;
+	transition: filter 0.35s;
+	width: 100%;
+    text-align: center;
+}
+
+	#add_notification:hover {
+		filter: brightness(130%);
+	}
+
+#week {
+	height: 100%;
+}
+
+	#week .week_days_names {
+		height: 15%;
+	}
+
+	#week .week_days_names div {
+		height: 100%;
+	}
+	
+	#week .daytile {
+		height: 100%;
+	}
+
+#week_wrapper {
+	height: 80%;
+	float: left;
+	overflow: hidden;
+}
+
+#week_wrapper_table {
+	height: 100%;
+	width: 200%;
+    position: relative;
+    left: 0;
+    display: table;
+    table-layout: fixed;
+    transition: 1s;
+}
+
+	.week_tabs {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		
+	}
+
+#week_controls {
+	height: 20%;
+	border-bottom: 1px #dadada solid;
+}
+
+	#week_controls div {
+		box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+		height: 100%;
+		float: left;
+		padding: 0.3vw;
+		background-color: #6e79f3;
+		border-radius: 1vw;
+		margin-left: 1vw;
+		color: white;
+		font-size: 1.0vw;
+		cursor: pointer;
+		transition: filter 0.35s;
+	}
+	
+	#week_controls div:hover {
+		filter: brightness(130%);
+	}
 
 /* apps =======================================================================*/
 
@@ -342,10 +426,6 @@ button{
 		width: 100%;
 	}
 
-	#week .daytile {
-		height: 100%;
-	}
-
 .greyout {
 	background-color: #e5e5e5;
 	color: #a3a2a2;
@@ -431,14 +511,6 @@ button{
 	font-size: 0.8vw;
 	background-color: #cdd0ff;
 }
-
-	#week .week_days_names {
-		height: 15%;
-	}
-
-	#week .week_days_names div {
-		height: 100%;
-	}
 
 .view_events {
 	
@@ -557,10 +629,6 @@ button{
 		height: 10vw;
 		resize: none;
 	}
-
-#week{
-	height: 100%;
-}
 
 #add_event_button {
 	float: left;

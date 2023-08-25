@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="main">
-			<div id="dashboard_tab" class="tabs" style="z-index:1; display:block;">
+			<div id="dashboard_tab" class="tabs" style="z-index:1; display:block; padding: 0.5vw;">
 				<div class="col-6">
 					<div class="dmenu col-12 box_shadow">
 						<?php include("displayNotifications.php"); ?>

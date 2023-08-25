@@ -18,11 +18,11 @@
 						<textarea class='notify_descr' readonly rows='6' wrap='soft'>" . $row['descr'] . "</textarea>
 					</div>";
 		}
-		echo "</div></div><div id='notify_tab_controls' class='col-12'>";
+		echo "</div></div><div id='notify_tab_controls' class='col-10'>";
 		for($i = 1; $i <= $count; $i++ ){
 			echo "<div class='cursor_pointer notify_tab_dot' onClick='notifyTab(this);'><div class='hor_center' " . (($i == 1) ? "style='background-color: #6e79f3'" : "") . "></div></div>";
 		}
-		echo "</div>";
+		echo "</div><div class='col-2'><div id='add_notification' class='hor_center' onClick=\"redirect('eventManager.php')\"><b>+ Dodaj</b></div></div>";
 	} 
 	else {
 		echo "<div style='text-align:center;'>Brak Wydarzeń</div>";
