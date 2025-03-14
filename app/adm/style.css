@@ -1,0 +1,80 @@
+* { 
+	margin:0; 
+	padding:0;
+	box-sizing: border-box;
+ }
+
+ body {
+	font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ /*1-12 podział ekranu na 12 kolumn */
+ .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+ .col-4 {width: 33.33%;}
+ .col-5 {width: 41.66%;}
+ .col-6 {width: 50%;}
+ .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+ .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;}
+ 
+ .col-13 {width: 14.28%;} /* 7 kolumn - kalendarz */
+ .col-14 {width: 12.5%;} /* 8 kolumn - apki */
+ .col-15 {width: 20%;} /* 5 kolumn - ostatnio uzywane apki */
+ 
+.padding5 {padding: 5px;}
+
+.borderblack { border: 1px solid black; }
+
+ .app_tile {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+ }
+
+ .app_logo {
+	height: 40%;
+	width: 40%;
+	margin: 30%
+ }
+
+ .app_logo2 {
+	height: 50px;
+	width: 50px;
+ }
+
+ .app_name {
+	position: absolute;
+	font-weight: normal;
+	left: 5%;
+	bottom: 4%;
+	width: 90%;
+	color: white;
+	font-size: 125%;
+}
+
+ [class*="col-"] {
+	 float: left;
+	 padding: 0.5vw;
+ }
+
+.tableStyle {
+	border-collapse: collapse;
+}
+
+	.tableStyle td, th{
+		border: 1px solid;
+		padding: 5px;
+	}
+
+	.tableStyle th {
+		padding: 0.5vw;
+		background: lightgrey;
+	}

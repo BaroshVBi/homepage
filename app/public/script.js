@@ -201,8 +201,11 @@ function focusTile(id) {
 }
 
 function focusTileWeek(id) {
+	currentday = id;
+	m = 0;
+	showMonth(0);
 	openTabs(document.getElementById("calendar_tab_1"), "calendar_tab1");
-	focusTile(id);
+	//focusTile(id);
 }
 
 function collapse(el, elb) {

@@ -393,6 +393,7 @@ button{
 .db_apps_title {
 	font-size: 1.0vw;
 	border-bottom: 1px #dadada solid;
+	height:22%;
 }
 
 .db_apps_container {

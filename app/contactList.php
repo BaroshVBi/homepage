@@ -12,7 +12,7 @@
 			
 			//Wewnetrzne
 			if ($xlsx = SimpleXLSX::parse('public/contact/contactList.xlsx')) {
-				$names =  $xlsx->rows(0);
+				$names = $xlsx->rows(0);
 				$count_rows = count($names);
 				for($i = 0; $i < $count_rows; $i++) {
 					$names_array[$names[$i][0]] = $names[$i][1];
